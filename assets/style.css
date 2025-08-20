@@ -382,6 +382,201 @@ img {
   opacity: 1;
 }
 
+/* Process Cards */
+.process-card {
+  height: 100%;
+  background: linear-gradient(135deg, var(--surface) 0%, rgba(20, 26, 35, 0.8) 100%);
+  border: 1px solid rgba(255, 194, 71, 0.1);
+  border-radius: var(--radius-xl) var(--radius-md) var(--radius-xl) var(--radius-md);
+  padding: var(--space-xl);
+  transition: all var(--transition-slow);
+  position: relative;
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Insights Showcase */
+.section-insights {
+  position: relative;
+  padding: calc(var(--space-3xl)) 0;
+  overflow: hidden;
+}
+
+.insights-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: var(--space-2xl);
+  align-items: center;
+  width: min(1200px, 92%);
+  margin: 0 auto;
+}
+
+.insights-content h2 {
+  background: linear-gradient(135deg, var(--primary), var(--accent));
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+.insights-stats {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-md);
+}
+
+.insight-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--space-sm);
+  padding: var(--space-sm) var(--space-lg);
+  border: 1px solid rgba(255, 194, 71, 0.15);
+  border-radius: var(--radius-full);
+  background: linear-gradient(135deg, rgba(255, 194, 71, 0.08), rgba(255, 96, 110, 0.06));
+}
+
+.insight-pill .pill-label {
+  color: var(--muted);
+  font-size: var(--text-sm);
+}
+
+.insight-pill .pill-value {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.insights-visual {
+  position: relative;
+}
+
+.insights-card {
+  position: relative;
+  border-radius: var(--radius-xl) var(--radius-md) var(--radius-xl) var(--radius-md);
+  border: 1px solid rgba(255, 194, 71, 0.12);
+  overflow: hidden;
+  backdrop-filter: blur(6px);
+  box-shadow: var(--shadow-lg), 0 0 30px rgba(255, 194, 71, 0.08);
+}
+
+.insights-card-bg {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(1200px 400px at -10% -10%, rgba(255, 194, 71, 0.12), transparent 60%),
+              radial-gradient(1200px 400px at 110% 110%, rgba(255, 96, 110, 0.12), transparent 60%),
+              linear-gradient(180deg, rgba(20, 26, 35, 0.75), rgba(20, 26, 35, 0.9));
+}
+
+.insights-card-grid {
+  position: absolute;
+  inset: 0;
+  background-image: linear-gradient(rgba(255, 194, 71, 0.08) 1px, transparent 1px),
+                    linear-gradient(90deg, rgba(255, 194, 71, 0.08) 1px, transparent 1px);
+  background-size: 28px 28px, 28px 28px;
+  mask-image: radial-gradient(circle at center, black, transparent 70%);
+}
+
+.insights-card-content {
+  position: relative;
+  padding: var(--space-2xl);
+}
+
+.metric {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: var(--space-sm);
+  align-items: center;
+  margin-bottom: var(--space-lg);
+}
+
+.metric-label {
+  color: var(--muted);
+}
+
+.metric-value {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.metric-bar {
+  grid-column: span 2;
+  height: 10px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.06);
+  overflow: hidden;
+}
+
+.metric-bar > span {
+  display: block;
+  height: 100%;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+}
+
+.insights-decoration {
+  position: absolute;
+  filter: blur(40px);
+  opacity: 0.16;
+  pointer-events: none;
+}
+
+.insights-decoration-1 {
+  width: 420px;
+  height: 420px;
+  left: -80px;
+  top: -80px;
+  background: radial-gradient(circle, var(--primary), transparent 60%);
+}
+
+.insights-decoration-2 {
+  width: 360px;
+  height: 360px;
+  right: -60px;
+  bottom: -60px;
+  background: radial-gradient(circle, var(--accent), transparent 60%);
+}
+
+.insights-decoration-3 {
+  width: 200px;
+  height: 200px;
+  left: 40%;
+  bottom: 10%;
+  background: radial-gradient(circle, var(--primary), transparent 60%);
+}
+
+@media (max-width: 991.98px) {
+  .insights-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.process-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--accent));
+  transform: translateX(-100%);
+  transition: transform var(--transition-slow);
+}
+
+.process-card:hover {
+  border-color: var(--primary);
+  box-shadow: var(--shadow-lg), 0 0 30px rgba(255, 194, 71, 0.15);
+  transform: translateY(-4px);
+}
+
+.process-card:hover::before {
+  transform: translateX(0);
+}
+
+.process-icon {
+  transition: var(--transition-base);
+}
+
+.process-card:hover .process-icon {
+  transform: scale(1.05);
+}
+
 /* Service Cards */
 .service-card {
   height: 100%;
@@ -718,10 +913,52 @@ img {
 
 /* Footer */
 .footer {
-  background: var(--surface);
-  border-top: 1px solid rgba(255, 194, 71, 0.1);
-  padding: var(--space-3xl) 0 var(--space-lg);
+  background: linear-gradient(135deg, var(--surface) 0%, rgba(20, 26, 35, 0.95) 100%);
+  border-top: 1px solid rgba(255, 194, 71, 0.14);
+  padding: var(--space-3xl) 0 var(--space-xl);
   position: relative;
+  overflow: hidden;
+}
+
+.footer a.text-muted:hover {
+  color: var(--primary) !important;
+}
+
+.footer h6,
+.footer h5 {
+  letter-spacing: 0.3px;
+}
+
+.footer .form-control {
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 194, 71, 0.15);
+  color: var(--text);
+}
+
+.footer .form-control::placeholder {
+  color: var(--muted);
+}
+
+.footer .btn.btn-primary {
+  box-shadow: none;
+}
+
+/* Footer checkbox: keep perfect square and prevent shrinking */
+.footer .form-check {
+  align-items: center;
+}
+
+.footer .form-check-input {
+  width: 18px;
+  height: 18px;
+  min-width: 18px;
+  min-height: 18px;
+  flex: 0 0 18px;
+  border-radius: 0 !important;
+}
+
+.footer .form-check-label {
+  margin-left: var(--space-sm);
 }
 
 .footer::before {
@@ -730,8 +967,24 @@ img {
   top: 0;
   left: 0;
   right: 0;
-  height: 3px;
+  height: 4px;
   background: linear-gradient(90deg, var(--primary), var(--accent), var(--accent-2));
+}
+
+.footer::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(circle at 10% -10%, rgba(255, 194, 71, 0.12), transparent 40%),
+                    radial-gradient(circle at 100% 120%, rgba(255, 96, 110, 0.12), transparent 40%);
+  pointer-events: none;
+}
+
+/* Disable reveal delay/animation in footer */
+.footer .reveal {
+  opacity: 1;
+  transform: none;
+  transition: none;
 }
 
 /* Cookie Banner */

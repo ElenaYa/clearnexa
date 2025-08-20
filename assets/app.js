@@ -1145,6 +1145,59 @@ const ErrorHandler = {
 };
 
 /**
+ * Statistics Counter Module
+ */
+const StatisticsCounter = {
+    init() {
+        this.setupCounterAnimation();
+    },
+
+    setupCounterAnimation() {
+        const counters = document.querySelectorAll('.stat-number[data-target]');
+        
+        if (counters.length === 0) return;
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    this.animateCounter(entry.target);
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.5,
+            rootMargin: '0px 0px -50px 0px'
+        });
+
+        counters.forEach(counter => {
+            observer.observe(counter);
+        });
+    },
+
+    animateCounter(element) {
+        const target = parseInt(element.getAttribute('data-target'));
+        const suffix = element.getAttribute('data-suffix') || '';
+        const duration = 2000; // 2 seconds
+        const steps = 60;
+        const stepValue = target / steps;
+        let current = 0;
+        let step = 0;
+
+        const timer = setInterval(() => {
+            step++;
+            current = Math.min(step * stepValue, target);
+            
+            element.textContent = Math.floor(current) + suffix;
+            
+            if (step >= steps) {
+                clearInterval(timer);
+                element.textContent = target + suffix;
+            }
+        }, duration / steps);
+    }
+};
+
+/**
  * Main Application Initialization
  */
 const App = {
@@ -1160,6 +1213,7 @@ const App = {
         PerformanceOptimizer.init();
         AccessibilityEnhancer.init();
         ErrorHandler.init();
+        StatisticsCounter.init();
         
         // Set up page-specific functionality
         this.setupPageSpecific();

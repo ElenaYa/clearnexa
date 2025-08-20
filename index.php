@@ -22,7 +22,7 @@ include 'partials/header.php';
                         asiantuntija Suomessa. Autamme yrityksiä tekemään älykkäitä, 
                         datalähtöisiä päätöksiä, jotka kasvattavat liiketoimintaa.
                     </p>
-                    <div class="d-flex flex-wrap gap-3">
+                    <div class="d-flex flex-wrap gap-3 mb-4 mb-lg-0">
                         <a href="services.php" class="btn btn-primary">
                             <i class="bi bi-rocket-takeoff me-2"></i>
                             Tutustu palveluihin
@@ -36,19 +36,76 @@ include 'partials/header.php';
             </div>
             <div class="col-lg-6">
                 <div class="reveal">
-                    <div class="position-relative">
-                        <img 
-                            src="images/hero-analytics.webp" 
-                            alt="Data-analytiikan visualisointeja ja kaavioita" 
-                            class="img-fluid rounded"
-                            style="border-radius: 24px 8px 24px 8px !important;"
-                        >
-                        <div class="position-absolute top-0 start-0 w-100 h-100 bg-gradient opacity-10 rounded"></div>
+                    <div class="position-relative bg-gradient" style="padding-top: 66.6667%; border-radius: 24px 8px 24px 8px !important; overflow: hidden;">
+                        <div class="position-absolute top-0 start-0 w-100 h-100" style="background-image: url('images/hero-analytics.webp'); background-size: cover; background-position: center; -webkit-clip-path: inset(0 round 24px 8px 24px 8px); clip-path: inset(0 round 114px 8px 114px 8px);"></div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+</section>
+
+<!-- Insights Showcase (Full-Width Custom Section) -->
+<section class="section section-insights">
+    <div class="insights-grid">
+        <div class="insights-content reveal">
+            <h2 class="mb-3">Älykkäät oivallukset, jotka ohjaavat päätöksiä</h2>
+            <p class="lead text-muted mb-4">
+                Yhdistämme laadukkaan datan, mallinnuksen ja visualisoinnin
+                tarjotaksemme selkeitä suosituksia – ei vain numeroita.
+            </p>
+            <div class="insights-stats">
+                <div class="insight-pill">
+                    <span class="pill-label">Mallien tarkkuus</span>
+                    <span class="pill-value">98%</span>
+                </div>
+                <div class="insight-pill">
+                    <span class="pill-label">Dataputkien luotettavuus</span>
+                    <span class="pill-value">99.95%</span>
+                </div>
+                <div class="insight-pill">
+                    <span class="pill-label">Raporttien SLA</span>
+                    <span class="pill-value">&lt; 1h</span>
+                </div>
+            </div>
+            <div class="d-flex flex-wrap gap-3 mt-4">
+                <a href="services.php#predictive" class="btn btn-primary">
+                    <i class="bi bi-lightning-charge me-2"></i>
+                    Tutustu analytiikkaan
+                </a>
+                <a href="services.php#visualization" class="btn btn-outline-primary">
+                    <i class="bi bi-bar-chart-line me-2"></i>
+                    Katso visualisoinnit
+                </a>
+            </div>
+        </div>
+        <div class="insights-visual reveal">
+            <div class="insights-card">
+                <div class="insights-card-bg"></div>
+                <div class="insights-card-grid"></div>
+                <div class="insights-card-content">
+                    <div class="metric">
+                        <span class="metric-label">Konversioputki</span>
+                        <div class="metric-bar"><span style="width: 82%"></span></div>
+                        <span class="metric-value">82%</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">Churn</span>
+                        <div class="metric-bar"><span style="width: 7%"></span></div>
+                        <span class="metric-value">7%</span>
+                    </div>
+                    <div class="metric">
+                        <span class="metric-label">CLTV kasvu</span>
+                        <div class="metric-bar"><span style="width: 34%"></span></div>
+                        <span class="metric-value">+34%</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="insights-decoration insights-decoration-1"></div>
+    <div class="insights-decoration insights-decoration-2"></div>
+    <div class="insights-decoration insights-decoration-3"></div>
 </section>
 
 <!-- Statistics Section -->
@@ -69,7 +126,7 @@ include 'partials/header.php';
             <div class="col-lg-3 col-md-6">
                 <div class="reveal">
                     <div class="text-center">
-                        <div class="stat-number">150+</div>
+                        <div class="stat-number" data-target="150" data-suffix="+">0+</div>
                         <h5 class="text-primary mb-2">Asiakasprojektia</h5>
                         <p class="text-muted">Onnistuneesti toteutettua data-analytiikkaprojektia</p>
                     </div>
@@ -78,7 +135,7 @@ include 'partials/header.php';
             <div class="col-lg-3 col-md-6">
                 <div class="reveal">
                     <div class="text-center">
-                        <div class="stat-number">95%</div>
+                        <div class="stat-number" data-target="95" data-suffix="%">0%</div>
                         <h5 class="text-primary mb-2">Asiakastyytyväisyys</h5>
                         <p class="text-muted">Asiakkaistamme suosittelee palveluitamme</p>
                     </div>
@@ -87,7 +144,7 @@ include 'partials/header.php';
             <div class="col-lg-3 col-md-6">
                 <div class="reveal">
                     <div class="text-center">
-                        <div class="stat-number">25%</div>
+                        <div class="stat-number" data-target="25" data-suffix="%">0%</div>
                         <h5 class="text-primary mb-2">Keskimääräinen ROI</h5>
                         <p class="text-muted">Parannus asiakkaiden tuottavuudessa ensimmäisenä vuonna</p>
                     </div>
@@ -96,7 +153,7 @@ include 'partials/header.php';
             <div class="col-lg-3 col-md-6">
                 <div class="reveal">
                     <div class="text-center">
-                        <div class="stat-number">24/7</div>
+                        <div class="stat-number" data-target="24" data-suffix="/7">0/7</div>
                         <h5 class="text-primary mb-2">Tuki</h5>
                         <p class="text-muted">Ympärivuorokautinen tekninen tuki kriittisissä projekteissa</p>
                     </div>
@@ -123,6 +180,7 @@ include 'partials/header.php';
             <div class="col-lg-4 col-md-6">
                 <div class="reveal">
                     <div class="service-card h-100">
+                        <img src="images/business-intelligence.webp" alt="Liiketoimintatiedon hallinta" class="img-fluid mb-4">
                         <div class="service-icon">
                             <i class="bi bi-graph-up-arrow"></i>
                         </div>
@@ -131,7 +189,7 @@ include 'partials/header.php';
                             Muutamme raakadatan ymmärrettäviksi ja toimiviksi 
                             liiketoimintatiedoiksi, jotka tukevat päätöksentekoa.
                         </p>
-                        <a services.php#bi" class="text-primary text-decoration-none">
+                        <a href="services.php#business-intelligence" class="text-primary text-decoration-none">
                             Lue lisää <i class="bi bi-arrow-right ms-1"></i>
                         </a>
                     </div>
@@ -140,6 +198,7 @@ include 'partials/header.php';
             <div class="col-lg-4 col-md-6">
                 <div class="reveal">
                     <div class="service-card h-100">
+                        <img src="images/data-visualization.webp" alt="Datan visualisointi" class="img-fluid mb-4">
                         <div class="service-icon">
                             <i class="bi bi-pie-chart-fill"></i>
                         </div>
@@ -157,6 +216,7 @@ include 'partials/header.php';
             <div class="col-lg-4 col-md-6">
                 <div class="reveal">
                     <div class="service-card h-100">
+                        <img src="images/predictive-analytics.webp" alt="Ennustava analytiikka" class="img-fluid mb-4">
                         <div class="service-icon">
                             <i class="bi bi-lightning-charge-fill"></i>
                         </div>
@@ -274,9 +334,11 @@ include 'partials/header.php';
         <div class="row g-4">
             <div class="col-lg-3 col-md-6">
                 <div class="reveal">
-                    <div class="text-center">
-                        <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 80px; height: 80px;">
-                            <span class="text-bg fw-bold fs-4">1</span>
+                    <div class="process-card h-100">
+                        <div class="process-icon">
+                            <div class="bg-gradient rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4" style="width: 80px; height: 80px;">
+                                <span class="text-bg fw-bold fs-4">1</span>
+                            </div>
                         </div>
                         <h5 class="text-primary mb-3">Analyysi</h5>
                         <p class="text-muted">
@@ -288,9 +350,11 @@ include 'partials/header.php';
             </div>
             <div class="col-lg-3 col-md-6">
                 <div class="reveal">
-                    <div class="text-center">
-                        <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 80px; height: 80px;">
-                            <span class="text-bg fw-bold fs-4">2</span>
+                    <div class="process-card h-100">
+                        <div class="process-icon">
+                            <div class="bg-gradient rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4" style="width: 80px; height: 80px;">
+                                <span class="text-bg fw-bold fs-4">2</span>
+                            </div>
                         </div>
                         <h5 class="text-primary mb-3">Suunnittelu</h5>
                         <p class="text-muted">
@@ -302,9 +366,11 @@ include 'partials/header.php';
             </div>
             <div class="col-lg-3 col-md-6">
                 <div class="reveal">
-                    <div class="text-center">
-                        <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 80px; height: 80px;">
-                            <span class="text-bg fw-bold fs-4">3</span>
+                    <div class="process-card h-100">
+                        <div class="process-icon">
+                            <div class="bg-gradient rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4" style="width: 80px; height: 80px;">
+                                <span class="text-bg fw-bold fs-4">3</span>
+                            </div>
                         </div>
                         <h5 class="text-primary mb-3">Toteutus</h5>
                         <p class="text-muted">
@@ -316,9 +382,11 @@ include 'partials/header.php';
             </div>
             <div class="col-lg-3 col-md-6">
                 <div class="reveal">
-                    <div class="text-center">
-                        <div class="bg-primary rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 80px; height: 80px;">
-                            <span class="text-bg fw-bold fs-4">4</span>
+                    <div class="process-card h-100">
+                        <div class="process-icon">
+                            <div class="bg-gradient rounded-circle d-flex align-items-center justify-content-center mx-auto mb-4" style="width: 80px; height: 80px;">
+                                <span class="text-bg fw-bold fs-4">4</span>
+                            </div>
                         </div>
                         <h5 class="text-primary mb-3">Tuki</h5>
                         <p class="text-muted">
@@ -342,6 +410,12 @@ include 'partials/header.php';
                     <p class="lead text-muted mb-4">
                         Ota yhteyttä jo tänään ja selvitetään yhdessä, 
                         miten voimme auttaa yritystäsi menestymään.
+                    </p>
+                    <p class="lead text-muted mb-4">
+                        Clearnexa Analytics Co. tarjoaa räätälöityjä data-analytiikkaratkaisuja, 
+                        jotka auttavat sinua ymmärtämään liiketoimintaasi paremmin ja 
+                        tekemään tietoon perustuvia päätöksiä. Asiantuntijamme ovat 
+                        valmiina tukemaan sinua jokaisessa vaiheessa.
                     </p>
                     <div class="d-flex flex-wrap gap-3 justify-content-center">
                         <a href="contact.php" class="btn btn-primary btn-lg">

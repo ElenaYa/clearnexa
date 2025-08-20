@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-4 mb-4">
-                <div class="reveal">
+                <div class="reveal" data-delay="0">
                     <h5 class="text-gradient mb-3">
                         <i class="bi bi-graph-up-arrow me-2"></i>
                         Clearnexa Analytics Co.
@@ -23,7 +23,7 @@
             </div>
             
             <div class="col-lg-3 col-md-6 mb-4">
-                <div class="reveal">
+                <div class="reveal" data-delay="0">
                     <h6 class="text-primary mb-3">Palvelut</h6>
                     <ul class="list-unstyled">
                         <li class="mb-2">
@@ -55,7 +55,7 @@
             </div>
             
             <div class="col-lg-2 col-md-6 mb-4">
-                <div class="reveal">
+                <div class="reveal" data-delay="0">
                     <h6 class="text-primary mb-3">Yritys</h6>
                     <ul class="list-unstyled">
                         <li class="mb-2">
@@ -75,7 +75,7 @@
             </div>
             
             <div class="col-lg-3 mb-4">
-                <div class="reveal">
+                <div class="reveal" data-delay="0">
                     <h6 class="text-primary mb-3">Uutiskirje</h6>
                     <p class="text-muted mb-3">
                         Tilaa uutiskirjeemme saadaksesi viimeisimmät uutiset 
@@ -115,14 +115,14 @@
         
         <div class="row align-items-center">
             <div class="col-md-6">
-                <div class="reveal">
+                <div class="reveal" data-delay="0">
                     <p class="mb-0 text-muted">
                         &copy; 2025 Clearnexa Analytics Co. Kaikki oikeudet pidätetään.
                     </p>
                 </div>
             </div>
             <div class="col-md-6">
-                <div class="reveal">
+                <div class="reveal" data-delay="0">
                     <div class="d-flex flex-wrap justify-content-md-end gap-3">
                             <a href="privacy-policy.php" class="text-muted text-decoration-none small">
                             Tietosuojaseloste
@@ -137,19 +137,6 @@
                             Evästekäytäntö
                         </a>
                     </div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="row mt-3">
-            <div class="col-12 text-center">
-                <div class="reveal">
-                    <p class="mb-0 text-muted small">
-                        <i class="bi bi-envelope me-1"></i>
-                        <a href="mailto:admin@clearnexa.com" class="text-primary text-decoration-none">
-                            admin@clearnexa.com
-                        </a>
-                    </p>
                 </div>
             </div>
         </div>
