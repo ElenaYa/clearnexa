@@ -16,6 +16,12 @@
                         löytämään datastaan piileviä mahdollisuuksia ja tekemään älykkäitä, 
                         tuloksellisia päätöksiä.
                     </p>
+                    <p class="lead text-muted mb-4">
+                        Hyödynnämme uusimpia teknologioita ja menetelmiä tarjotaksemme 
+                        asiakkaillemme parhaita mahdollisia data-analytiikan ratkaisuja. 
+                        Asiantuntijatiimimme on sitoutunut auttamaan yrityksiä saavuttamaan 
+                        liiketoimintatavoitteensa datan avulla.
+                    </p>
                     <div class="d-flex flex-wrap gap-3">
                         <a href="services.php" class="btn btn-primary">
                             <i class="bi bi-gear me-2"></i>
@@ -30,17 +36,20 @@
             </div>
             <div class="col-lg-6">
                 <div class="reveal">
+                    
                     <img 
                         src="images/about-hero.webp" 
                         alt="Clearnexa Analytics Co. toimisto ja tiimi" 
                         class="img-fluid rounded"
-                        style="border-radius: 24px 8px 24px 8px !important;"
+                        style="border-radius: 74px 8px 74px 8px !important;"
                     >
                 </div>
             </div>
         </div>
     </div>
 </section>
+
+
 
 <!-- Mission & Vision -->
 <section class="section section-alt">
@@ -51,7 +60,8 @@
                     <h2 class="mb-3">Meidän missiomme</h2>
                     <p class="lead text-muted">
                         Tehdä data-analytiikasta helposti lähestyttävää ja 
-                        käytännöllistä kaikenkokoisille yrityksille
+                        käytännöllistä kaikenkokoisille yrityksille, sekä 
+                        varmistaa asiakkaidemme menestys dataohjatulla päätöksenteolla
                     </p>
                 </div>
             </div>
@@ -67,7 +77,11 @@
                         <p class="text-muted">
                             Muuttaa monimutkaiset datasetit ymmärrettäviksi ja 
                             toimiviksi liiketoimintatiedoiksi, jotka auttavat 
-                            yrityksiä kasvamaan ja menestymään kilpailussa.
+                            yrityksiä kasvamaan ja menestymään kilpailussa. 
+                            Haluamme olla edelläkävijä data-analytiikan 
+                            demokratisoinnissa ja tehdä edistyneistä analytiikkaratkaisuista 
+                            saavutettavia kaikille yrityksille, riippumatta niiden 
+                            koosta tai toimialasta.
                         </p>
                     </div>
                 </div>
@@ -82,7 +96,11 @@
                         <p class="text-muted">
                             Olla Suomen luotetuin kumppani data-analytiikassa, 
                             joka auttaa yrityksiä tekemään älykäämpiä päätöksiä 
-                            ja saavuttamaan poikkeuksellisia tuloksia.
+                            ja saavuttamaan poikkeuksellisia tuloksia. Pyrimme 
+                            jatkuvasti innovoimaan ja kehittämään uusia ratkaisuja, 
+                            jotka mullistavat tavan, jolla yritykset hyödyntävät 
+                            dataansa. Tavoitteenamme on luoda tulevaisuus, jossa 
+                            jokainen yritys voi menestyä dataohjatulla päätöksenteolla.
                         </p>
                     </div>
                 </div>
@@ -337,7 +355,58 @@
         </div>
     </div>
 </section>
-
+<!-- Culture & Team Showcase -->
+<section class="section section-culture">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6 order-lg-2">
+                <div class="reveal">
+                    <div class="culture-visual">
+                        <div class="culture-media">
+                            <div class="culture-image" aria-label="Clearnexa-tiimi työskentelee yhdessä modernissa toimistossa, data-visualisointien ja näyttöjen ympäröimänä"></div>
+                            <div class="culture-overlay"></div>
+                            <div class="culture-badge">Clearnexa Team</div>
+                        </div>
+                        <div class="culture-metrics">
+                            <div class="metric">
+                                <span class="metric-value">12</span>
+                                <span class="metric-label">vuoden kokemus</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">+300</span>
+                                <span class="metric-label">onnistunutta projektia</span>
+                            </div>
+                            <div class="metric">
+                                <span class="metric-value">5</span>
+                                <span class="metric-label">toimipaikkaa</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6 order-lg-1">
+                <div class="reveal">
+                    <h2 class="mb-4">Kulttuurimme ja tiimimme</h2>
+                    <p class="text-muted mb-4">
+                        Uskomme avoimuuteen, jatkuvaan oppimiseen ja yhteiseen tekemiseen.
+                        Tiimimme yhdistää data-arkkitehdit, analyytikot, suunnittelijat ja
+                        kehittäjät – kaikki saman tavoitteen äärellä: tuottaa mitattavaa arvoa.
+                    </p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="testimonials.php" class="btn btn-primary">
+                            <i class="bi bi-people me-2"></i>
+                            Tapaa tiimi
+                        </a>
+                        <a href="services.php#visualization" class="btn btn-outline-primary">
+                            <i class="bi bi-bar-chart-line me-2"></i>
+                            Näe, mitä rakennamme
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 <!-- Certifications & Partners -->
 <section class="section section-alt">
     <div class="container">
@@ -370,8 +439,8 @@
                         <div class="bg-primary bg-opacity-10 rounded-circle d-flex align-items-center justify-content-center mx-auto mb-3" style="width: 80px; height: 80px;">
                             <i class="bi bi-cloud text-primary fs-2"></i>
                         </div>
-                        <h6 class="text-primary">Cloud Partner</h6>
-                        <p class="text-muted small mb-0">Microsoft Azure & AWS</p>
+                        <h6 class="text-primary">Pilvipalvelukumppani</h6>
+                        <p class="text-muted small mb-0">Johtavat pilvipalvelualustat</p>
                     </div>
                 </div>
             </div>

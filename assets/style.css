@@ -362,15 +362,16 @@ img {
 .card-diagonal::before {
   content: '';
   position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  background: linear-gradient(135deg, var(--primary), var(--accent), var(--accent-2));
-  border-radius: var(--radius-xl) var(--radius-md) var(--radius-xl) var(--radius-md);
-  z-index: var(--z-hide);
-  opacity: 0;
-  transition: opacity var(--transition-base);
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, var(--primary), var(--accent), var(--accent-2));
+  border-top-left-radius: var(--radius-xl);
+  border-top-right-radius: var(--radius-md);
+  z-index: var(--z-base);
+  transform: translateX(-100%);
+  transition: transform var(--transition-slow);
 }
 
 .card-diagonal:hover {
@@ -379,7 +380,7 @@ img {
 }
 
 .card-diagonal:hover::before {
-  opacity: 1;
+  transform: translateX(0);
 }
 
 /* Process Cards */
@@ -400,6 +401,83 @@ img {
   position: relative;
   padding: calc(var(--space-3xl)) 0;
   overflow: hidden;
+}
+
+/* Culture & Team Showcase */
+.section-culture {
+  position: relative;
+}
+
+.culture-visual {
+  position: relative;
+}
+
+.culture-media {
+  position: relative;
+  border-radius: 74px 8px 74px 8px;
+  overflow: hidden;
+  border: 1px solid rgba(255, 194, 71, 0.15);
+  box-shadow: var(--shadow-lg);
+}
+
+.culture-image {
+  width: 100%;
+  padding-top: 65%;
+  background-image: url('../images/team-collaboration.webp');
+  background-size: cover;
+  background-position: center;
+  filter: saturate(1.05) contrast(1.02);
+}
+
+.culture-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(255, 194, 71, 0.12), rgba(255, 96, 110, 0.12));
+}
+
+.culture-badge {
+  position: absolute;
+  bottom: 12px;
+  left: 12px;
+  background: rgba(20, 26, 35, 0.7);
+  border: 1px solid rgba(255, 194, 71, 0.25);
+  color: var(--text);
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-size: var(--text-sm);
+}
+
+.culture-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-md);
+  margin-top: var(--space-lg);
+}
+
+.culture-metrics .metric {
+  background: linear-gradient(135deg, rgba(255, 194, 71, 0.06), rgba(255, 96, 110, 0.06));
+  border: 1px solid rgba(255, 194, 71, 0.15);
+  border-radius: var(--radius-xl) var(--radius-md) var(--radius-xl) var(--radius-md);
+  padding: var(--space-lg);
+  text-align: center;
+}
+
+.culture-metrics .metric-value {
+  display: block;
+  font-weight: 700;
+  font-size: var(--text-2xl);
+  color: var(--primary);
+}
+
+.culture-metrics .metric-label {
+  color: var(--muted);
+  font-size: var(--text-sm);
+}
+
+@media (max-width: 991.98px) {
+  .culture-metrics {
+    grid-template-columns: 1fr;
+  }
 }
 
 .insights-grid {
