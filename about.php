@@ -115,10 +115,10 @@
         <div class="row align-items-center">
             <div class="col-lg-6">
                 <div class="reveal">
-                    <h2 class="mb-4">Meidän tarinامme</h2>
+                    <h2 class="mb-4">Meidän tarinamme</h2>
                     <p class="text-muted mb-4">
                         Clearnexa Analytics Co. perustettiin vuonna 2014 vastauksena 
-                        kasvavaan tarpeeseen käyttäjäystävällisille ja tehokkaile 
+                        kasvavaan tarpeeseen käyttäjäystävällisille ja tehokkaille 
                         data-analytiikkaratkaisuille Suomessa.
                     </p>
                     <p class="text-muted mb-4">

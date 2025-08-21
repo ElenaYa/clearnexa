@@ -159,7 +159,7 @@ const AnimationController = {
         document.querySelectorAll('.reveal').forEach((el, index) => {
             // Add automatic stagger if no delay specified
             if (!el.dataset.delay) {
-                el.dataset.delay = index * 100;
+                el.dataset.delay = index * 50;
             }
             revealObserver.observe(el);
         });
@@ -763,7 +763,6 @@ const NavigationController = {
     },
 
     setupNavigationVisibility() {
-        let lastScrollTop = 0;
         const navbar = document.querySelector('.angle-banner');
         
         if (!navbar) return;
@@ -771,15 +770,11 @@ const NavigationController = {
         const handleScroll = Utils.throttle(() => {
             const scrollTop = window.pageYOffset || document.documentElement.scrollTop;
             
-            if (scrollTop > lastScrollTop && scrollTop > 100) {
-                // Scrolling down - hide navbar
-                navbar.style.transform = 'translateY(-100%)';
+            if (scrollTop > 50) {
+                navbar.classList.add('scrolled');
             } else {
-                // Scrolling up - show navbar
-                navbar.style.transform = 'translateY(0)';
+                navbar.classList.remove('scrolled');
             }
-            
-            lastScrollTop = scrollTop <= 0 ? 0 : scrollTop;
         }, 100);
 
         window.addEventListener('scroll', handleScroll, { passive: true });
