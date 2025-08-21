@@ -178,10 +178,10 @@ include 'partials/header.php';
                             Lähetä meille sähköpostia ja vastaamme 
                             virka-aikana 24 tunnin sisään.
                         </p>
-                        <a href="mailto:admin@clearnexa.com" class="btn btn-outline-primary">
+                        <span>
                             <i class="bi bi-envelope me-2"></i>
                             admin@clearnexa.com
-                        </a>
+                        </span>
                     </div>
                 </div>
             </div>
@@ -333,10 +333,6 @@ include 'partials/header.php';
                             <i class="bi bi-arrow-up me-2"></i>
                             Täytä lomake
                         </a>
-                        <span class="btn btn-outline-primary btn-lg">
-                            <i class="bi bi-envelope me-2"></i>
-                            Lähetä sähköpostia
-                        </span>
                     </div>
                 </div>
             </div>
