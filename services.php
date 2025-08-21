@@ -122,6 +122,7 @@ include 'partials/header.php';
                         ja tekemään tietoon perustuvia päätöksiä. Tarjoamme kattavan 
                         tuen BI-ratkaisun käyttöönotosta jatkuvaan kehittämiseen.
                     </p>
+
                     
                     <h5 class="text-primary mb-3">Toimitukset:</h5>
                     <ul class="text-muted mb-4">
@@ -130,11 +131,12 @@ include 'partials/header.php';
                         <li>KPI-seurantajärjestelmä</li>
                         <li>Käyttäjäkoulutus</li>
                     </ul>
-
                     <a href="contact.php" class="btn btn-primary">
                         <i class="bi bi-envelope me-2"></i>
                         Ota yhteyttä
                     </a>
+
+                    
                 </div>
             </div>
             <div class="col-lg-6">
@@ -187,7 +189,6 @@ include 'partials/header.php';
         </div>
     </div>
 </section>
-
 <section class="section bg-surface">
     <div class="container">
         <div class="row justify-content-center">
@@ -241,6 +242,8 @@ include 'partials/header.php';
         </div>
     </div>
 </section>
+
+
 
 <section id="visualization" class="section">
     <div class="container">
