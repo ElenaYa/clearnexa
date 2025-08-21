@@ -444,7 +444,7 @@ include 'partials/header.php';
                             <i class="bi bi-building"></i>
                         </div>
                         <h5 class="text-primary mb-3">Rahoitusala</h5>
-                        <div class="stat-number text-primary mb-2">35%</div>
+                        <div class="stat-number text-primary mb-2" data-target="35" data-suffix="%">0%</div>
                         <p class="text-muted">Keskimääräinen tuottavuuden kasvu riskinhallinnassa</p>
                     </div>
                 </div>
@@ -456,7 +456,7 @@ include 'partials/header.php';
                             <i class="bi bi-cart"></i>
                         </div>
                         <h5 class="text-primary mb-3">Vähittäiskauppa</h5>
-                        <div class="stat-number text-primary mb-2">42%</div>
+                        <div class="stat-number text-primary mb-2" data-target="42" data-suffix="%">0%</div>
                         <p class="text-muted">Myynnin kasvu optimoidun varastonhallinnan ansiosta</p>
                     </div>
                 </div>
@@ -468,7 +468,7 @@ include 'partials/header.php';
                             <i class="bi bi-gear"></i>
                         </div>
                         <h5 class="text-primary mb-3">Teollisuus</h5>
-                        <div class="stat-number text-primary mb-2">28%</div>
+                        <div class="stat-number text-primary mb-2" data-target="28" data-suffix="%">0%</div>
                         <p class="text-muted">Tuotantokustannusten säästö ennakoivan huollon avulla</p>
                     </div>
                 </div>
@@ -480,7 +480,7 @@ include 'partials/header.php';
                             <i class="bi bi-heart-pulse"></i>
                         </div>
                         <h5 class="text-primary mb-3">Terveydenhuolto</h5>
-                        <div class="stat-number text-primary mb-2">55%</div>
+                        <div class="stat-number text-primary mb-2" data-target="55" data-suffix="%">0%</div>
                         <p class="text-muted">Potilaskokemusten parantuminen paremman datan avulla</p>
                     </div>
                 </div>
