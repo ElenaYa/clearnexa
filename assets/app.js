@@ -594,7 +594,7 @@ const NavigationController = {
     init() {
         this.setupMobileMenu();
         this.setupSmoothScrolling();
-        this.setupActiveNavigation();
+        // this.setupActiveNavigation();
         this.setupNavigationVisibility();
     },
 
@@ -680,21 +680,22 @@ const NavigationController = {
         });
     },
 
-    setupActiveNavigation() {
-        const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
-        const currentPath = window.location.pathname;
+    // setupActiveNavigation() {
+    //     const navLinks = document.querySelectorAll('.navbar-nav .nav-link');
+    //     const currentPath = window.location.pathname;
 
-        navLinks.forEach(link => {
-            const linkPath = new URL(link.href).pathname;
+    //     navLinks.forEach(link => {
+    //         const linkPath = new URL(link.href).pathname;
             
-            if (linkPath === currentPath || 
-                (currentPath === '/' && linkPath === '/index.php') ||
-                (currentPath === '/index.php' && linkPath === '/')) {
-                link.classList.add('active');
-            }
-        });
-    },
+    //         if (linkPath === currentPath || 
+    //             (currentPath === '/' && linkPath === '/index.php') ||
+    //             (currentPath === '/index.php' && linkPath === '/')) {
+    //             link.classList.add('active');
+    //         }
+    //     });
+    // },
 
+    
     setupNavigationVisibility() {
         const navbar = document.querySelector('.angle-banner');
         

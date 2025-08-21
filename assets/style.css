@@ -355,6 +355,11 @@ img {
   background-color: rgba(255, 194, 71, 0.15);
 }
 
+.navbar .nav-link.active {
+	color: var(--primary) !important;
+	position: relative;
+}
+
 .navbar-toggler {
   border: none;
   color: var(--text);

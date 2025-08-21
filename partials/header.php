@@ -65,6 +65,7 @@
     </script>
 </head>
 <body<?php if (isset($page_class)): ?> class="<?= htmlspecialchars($page_class) ?>"<?php endif; ?>>
+<?php $currentPage = basename(parse_url($_SERVER['REQUEST_URI'], PHP_URL_PATH)); ?>
 
 <header class="angle-banner">
     <div class="container">
@@ -80,22 +81,22 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="index.php" aria-label="Etusivu">Etusivu</a>
+                        <a class="nav-link<?= ($currentPage === 'index.php') ? ' active' : '' ?>" href="index.php" aria-label="Etusivu">Etusivu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="about.php" aria-label="Tietoa meistä">Tietoa meistä</a>
+                        <a class="nav-link<?= ($currentPage === 'about.php') ? ' active' : '' ?>" href="about.php" aria-label="Tietoa meistä">Tietoa meistä</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="services.php" aria-label="Palvelut">Palvelut</a>
+                        <a class="nav-link<?= ($currentPage === 'services.php') ? ' active' : '' ?>" href="services.php" aria-label="Palvelut">Palvelut</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="testimonials.php" aria-label="Asiakaskokemukset">Asiakaskokemukset</a>
+                        <a class="nav-link<?= ($currentPage === 'testimonials.php') ? ' active' : '' ?>" href="testimonials.php" aria-label="Asiakaskokemukset">Asiakaskokemukset</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="faq.php" aria-label="Usein kysytyt kysymykset">FAQ</a>
+                        <a class="nav-link<?= ($currentPage === 'faq.php') ? ' active' : '' ?>" href="faq.php" aria-label="Usein kysytyt kysymykset">FAQ</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="contact.php" aria-label="Ota yhteyttä">Yhteystiedot</a>
+                        <a class="nav-link<?= ($currentPage === 'contact.php') ? ' active' : '' ?>" href="contact.php" aria-label="Ota yhteyttä">Yhteystiedot</a>
                     </li>
                 </ul>
             </div>
