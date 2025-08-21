@@ -1,4 +1,7 @@
-<?php include 'partials/header.php'; ?>
+<?php 
+$page_class = 'page-legal page-privacy';
+include 'partials/header.php'; 
+?>
 
 <!-- Privacy Policy Section -->
 <section class="section">

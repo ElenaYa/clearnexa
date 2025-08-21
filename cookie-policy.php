@@ -1,5 +1,8 @@
 
-<?php include 'partials/header.php'; ?>
+<?php 
+$page_class = 'page-legal page-cookies';
+include 'partials/header.php'; 
+?>
 
 <!-- Cookie Policy Section -->
 <section class="section">
@@ -51,7 +54,7 @@
                             <strong class="text-primary">Käyttötarkoitukset:</strong>
                             <ul class="mt-2 mb-3">
                                 <li>Käyttäjän istunnon ylläpitäminen</li>
-                                <li>Tietoturvaominaisuudet</li>
+                                <li>Turva</li>
                                 <li>Lomakkeiden toiminta</li>
                                 <li>Evästeasetuksien muistaminen</li>
                                 <li>Teknisen toiminnallisuuden varmistaminen</li>
@@ -165,13 +168,7 @@
                             Voitte hallita evästeasetuksianne sivustomme 
                             evästebannerin kautta tai klikkaamalla alla olevaa painiketta:
                         </p>
-                        <div class="text-center mb-4">
-                            <button type="button" class="btn btn-primary" onclick="showCookieModal()">
-                                <i class="bi bi-gear me-2"></i>
-                                Mukauta evästeasetuksia
-                            </button>
-                        </div>
-                        
+                      
                         <h3 class="text-primary mb-3">6.2 Selaimen evästeasetukset</h3>
                         <p class="mb-3">
                             Useimmat selaimet sallivat evästeiden hallinnan asetuksissa. 
@@ -242,7 +239,7 @@
                             </p>
                         </div>
                         
-                        <h2 class="text-primary mb-4">7. Evästeiden vaikutus käyttökokemukseen</h2>
+                        <h2 class="text-primary mb-4">7. Evästeiden vaikutukset</h2>
                         
                         <h3 class="text-primary mb-3">7.1 Jos hyväksytte evästeet</h3>
                         <ul class="mb-4">
@@ -332,10 +329,7 @@
                     
                     <div class="text-center mt-4">
                         <div class="d-flex flex-wrap gap-3 justify-content-center">
-                            <button type="button" class="btn btn-primary" onclick="showCookieModal()">
-                                <i class="bi bi-gear me-2"></i>
-                                Mukauta evästeasetuksia
-                            </button>
+                           
                             <a href="index.php" class="btn btn-outline-primary">
                                 <i class="bi bi-house me-2"></i>
                                 Takaisin etusivulle

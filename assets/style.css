@@ -1829,3 +1829,126 @@ body:not(.page-index):not(.page-about) .hero {
     outline-offset: 2px;
   }
 }
+
+/* Legal pages: show content immediately */
+.page-legal .reveal {
+	opacity: 1;
+	transform: none;
+	transition: none;
+}
+
+/* Disclaimer page mobile typography fixes */
+@media (max-width: 768px) {
+  .page-disclaimer h1,
+  .page-disclaimer h2,
+  .page-disclaimer h3,
+  .page-disclaimer p,
+  .page-disclaimer li {
+    overflow-wrap: anywhere;
+    word-break: break-word;
+    hyphens: auto;
+  }
+
+  .page-disclaimer h1 {
+    font-size: var(--text-2xl);
+    line-height: 1.25;
+  }
+
+  .page-disclaimer h2 {
+    font-size: var(--text-xl);
+    line-height: 1.3;
+  }
+
+  .page-disclaimer h3 {
+    font-size: var(--text-lg);
+    line-height: 1.35;
+  }
+
+  .page-disclaimer .card-diagonal {
+    padding: var(--space-xl) var(--space-lg);
+  }
+}
+
+@media (max-width: 576px) {
+  .page-disclaimer h1 {
+    font-size: var(--text-xl);
+    line-height: 1.25;
+  }
+
+  .page-disclaimer h2 {
+    font-size: var(--text-lg);
+    line-height: 1.3;
+  }
+
+  .page-disclaimer h3 {
+    font-size: var(--text-base);
+    line-height: 1.35;
+  }
+
+  .page-disclaimer .container {
+    padding-left: var(--space-md);
+    padding-right: var(--space-md);
+  }
+}
+
+/* Terms page mobile typography fixes */
+@media (max-width: 768px) {
+  .page-terms h1 {
+    font-size: var(--text-2xl);
+    line-height: 1.25;
+  }
+  .page-terms h2 {
+    font-size: var(--text-xl);
+    line-height: 1.3;
+  }
+  .page-terms h3 {
+    font-size: var(--text-lg);
+    line-height: 1.35;
+  }
+}
+
+@media (max-width: 576px) {
+  .page-terms h1 {
+    font-size: var(--text-xl);
+    line-height: 1.25;
+  }
+  .page-terms h2 {
+    font-size: var(--text-lg);
+    line-height: 1.3;
+  }
+  .page-terms h3 {
+    font-size: var(--text-base);
+    line-height: 1.35;
+  }
+}
+
+/* Privacy policy page mobile typography fixes */
+@media (max-width: 768px) {
+  .page-privacy h1 {
+    font-size: var(--text-2xl);
+    line-height: 1.25;
+  }
+  .page-privacy h2 {
+    font-size: var(--text-xl);
+    line-height: 1.3;
+  }
+  .page-privacy h3 {
+    font-size: var(--text-lg);
+    line-height: 1.35;
+  }
+}
+
+@media (max-width: 576px) {
+  .page-privacy h1 {
+    font-size: var(--text-xl);
+    line-height: 1.25;
+  }
+  .page-privacy h2 {
+    font-size: var(--text-lg);
+    line-height: 1.3;
+  }
+  .page-privacy h3 {
+    font-size: var(--text-base);
+    line-height: 1.35;
+  }
+}

@@ -1,5 +1,8 @@
 
-<?php include 'partials/header.php'; ?>
+<?php 
+$page_class = 'page-legal page-disclaimer';
+include 'partials/header.php'; 
+?>
 
 <!-- Disclaimer Section -->
 <section class="section">
