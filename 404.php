@@ -1,7 +1,6 @@
 
 <?php 
-// Set 404 HTTP status code
-http_response_code(404);
+
 include 'partials/header.php'; 
 ?>
 
@@ -65,64 +64,6 @@ include 'partials/header.php';
                                     Ota yhteyttä
                                 </a>
                             </div>
-                        </div>
-                    </div>
-                    
-                    <!-- Search Alternative -->
-                    <div class="mt-5">
-                        <h5 class="text-primary mb-3">Etsitkö jotain tiettyä?</h5>
-                        <p class="text-muted mb-3">
-                            Voit selata suosituimpia sivujamme tai ottaa suoraan yhteyttä:
-                        </p>
-                        <ul class="list-unstyled">
-                            <li class="mb-2">
-                                <a href="services.php#bi" class="text-primary text-decoration-none">
-                                    <i class="bi bi-arrow-right me-2"></i>
-                                    Liiketoimintatiedon hallinta (BI)
-                                </a>
-                            </li>
-                            <li class="mb-2">
-                                <a href="services.php#visualization" class="text-primary text-decoration-none">
-                                    <i class="bi bi-arrow-right me-2"></i>
-                                    Datan visualisointi
-                                </a>
-                            </li>
-                            <li class="mb-2">
-                                <a href="services.php#predictive" class="text-primary text-decoration-none">
-                                    <i class="bi bi-arrow-right me-2"></i>
-                                    Ennustava analytiikka
-                                </a>
-                            </li>
-                            <li class="mb-2">
-                                <a href="testimonials.php" class="text-primary text-decoration-none">
-                                    <i class="bi bi-arrow-right me-2"></i>
-                                    Asiakaskokemukset
-                                </a>
-                            </li>
-                            <li class="mb-2">
-                                <a href="faq.php" class="text-primary text-decoration-none">
-                                    <i class="bi bi-arrow-right me-2"></i>
-                                    Usein kysytyt kysymykset
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    
-                    <!-- Contact Info -->
-                    <div class="mt-5 p-4 bg-primary bg-opacity-10 rounded" style="border-radius: 24px 8px 24px 8px !important;">
-                        <h6 class="text-primary mb-3">
-                            <i class="bi bi-headset me-2"></i>
-                            Tarvitsetko apua?
-                        </h6>
-                        <p class="text-muted mb-3">
-                            Jos et löydä etsimääsi, älä epäröi ottaa yhteyttä. 
-                            Autamme mielellämme!
-                        </p>
-                        <div class="d-flex justify-content-center">
-                            <a href="mailto:admin@clearnexa.com" class="btn btn-primary">
-                                <i class="bi bi-envelope me-2"></i>
-                                admin@clearnexa.com
-                            </a>
                         </div>
                     </div>
                 </div>

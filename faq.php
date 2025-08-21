@@ -136,6 +136,31 @@ include 'partials/header.php';
                                 </div>
                             </div>
                         </div>
+
+                        <div class="accordion-item">
+                            <h4 class="accordion-header">
+                                <button 
+                                    class="accordion-button collapsed" 
+                                    type="button" 
+                                    data-bs-target="#services4" 
+                                    aria-expanded="false" 
+                                    aria-controls="services4"
+                                >
+                                    Miten projekti käynnistyy ja mitä ensimmäiseksi tapahtuu?
+                                </button>
+                            </h4>
+                            <div id="services4" class="accordion-collapse collapse" data-bs-parent="#servicesAccordion">
+                                <div class="accordion-body">
+                                    <p>Projektin aloitus etenee selkeissä vaiheissa:</p>
+                                    <ul>
+                                        <li><strong>Kickoff:</strong> Tavoitteiden, sidosryhmien ja aikataulun läpikäynti</li>
+                                        <li><strong>Nykytilan kartoitus:</strong> Datalähteet, integraatiot, käyttöoikeudet</li>
+                                        <li><strong>Suunnitelma:</strong> Työvaiheet, prioriteetit ja mittarit (KPI:t)</li>
+                                        <li><strong>Nopea edistyminen:</strong> Ensimmäiset näkyvät tulokset 2–4 viikon sisällä</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -268,6 +293,31 @@ include 'partials/header.php';
                                 </div>
                             </div>
                         </div>
+
+                        <div class="accordion-item">
+                            <h4 class="accordion-header">
+                                <button 
+                                    class="accordion-button collapsed" 
+                                    type="button" 
+                                    data-bs-target="#tech4" 
+                                    aria-expanded="false" 
+                                    aria-controls="tech4"
+                                >
+                                    Tarjoatteko Proof of Concept (POC) -vaiheen?
+                                </button>
+                            </h4>
+                            <div id="tech4" class="accordion-collapse collapse" data-bs-parent="#technologyAccordion">
+                                <div class="accordion-body">
+                                    <p>Kyllä. POC-vaiheella varmistamme ratkaisun toimivuuden pienemmässä laajuudessa ennen täydellistä toteutusta. POC sisältää:</p>
+                                    <ul>
+                                        <li>Selkeä tavoite ja mittarit onnistumiselle</li>
+                                        <li>Rajoitettu datamäärä ja rajattu toiminnallisuus</li>
+                                        <li>Nopea toteutus (2–4 viikkoa)</li>
+                                        <li>Johtopäätökset ja suositus jatkotoimista</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
@@ -335,6 +385,30 @@ include 'partials/header.php';
                                     <p>
                                         Tämän tapaamisen jälkeen teillä on selkeä kuva siitä, miten voimme auttaa ja mitä se maksaisi.
                                     </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h4 class="accordion-header">
+                                <button 
+                                    class="accordion-button collapsed" 
+                                    type="button" 
+                                    data-bs-target="#pricing3" 
+                                    aria-expanded="false" 
+                                    aria-controls="pricing3"
+                                >
+                                    Onko tarjouksenne sitova? Entä irtisanomisaika?
+                                </button>
+                            </h4>
+                            <div id="pricing3" class="accordion-collapse collapse" data-bs-parent="#pricingAccordion">
+                                <div class="accordion-body">
+                                    <p>Tarjouksemme on sitova sovitun ajan. Joustamme sopimusmalleissa:</p>
+                                    <ul>
+                                        <li><strong>Kiinteä projekti:</strong> Selkeä hinta ja toimitussisältö</li>
+                                        <li><strong>Tuntiperusteinen:</strong> Irtisanominen mahdollinen lyhyellä varoitusajalla</li>
+                                        <li><strong>Kuukausimalli:</strong> 1 kuukauden irtisanomisaika ellei toisin sovita</li>
+                                    </ul>
                                 </div>
                             </div>
                         </div>
@@ -409,8 +483,174 @@ include 'partials/header.php';
                                 </div>
                             </div>
                         </div>
+                        <div class="accordion-item">
+                            <h4 class="accordion-header">
+                                <button 
+                                    class="accordion-button collapsed" 
+                                    type="button" 
+                                    data-bs-target="#support3" 
+                                    aria-expanded="false" 
+                                    aria-controls="support3"
+                                >
+                                    Tarjoatteko jatkuvaa analytiikkatiimin tukea (Managed Analytics)?
+                                </button>
+                            </h4>
+                            <div id="support3" class="accordion-collapse collapse" data-bs-parent="#supportAccordion">
+                                <div class="accordion-body">
+                                    <p>Kyllä. Voimme toimia jatkuvana kumppanina osana tiimiänne:</p>
+                                    <ul>
+                                        <li>BI-ympäristöjen ylläpito ja kehitys</li>
+                                        <li>Raportoinnin ja dataputkien valvonta</li>
+                                        <li>Ad hoc -analyysit ja jatkokehityspyynnöt</li>
+                                        <li>Säännölliset katselmukset ja roadmap</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+
+                <!-- Yhteistyö ja Sarvaus -->
+                <div class="reveal mb-5">
+                    <h3 class="text-primary mb-4">
+                        <i class="bi bi-people me-2"></i>
+                        Yhteistyö ja sarvaus
+                    </h3>
+                    <div class="accordion" id="collaborationAccordion">
+                        <div class="accordion-item">
+                            <h4 class="accordion-header">
+                                <button 
+                                    class="accordion-button collapsed" 
+                                    type="button" 
+                                    data-bs-target="#collaboration1" 
+                                    aria-expanded="false" 
+                                    aria-controls="collaboration1"
+                                >
+                                    Miten voimme yhteistyötä?
+                                </button>
+                            </h4>
+                            <div id="collaboration1" class="accordion-collapse collapse" data-bs-parent="#collaborationAccordion">
+                                <div class="accordion-body">
+                                    <p>
+                                        Yhteistyö on meidän ensiarvoisen tärkeä asia. Tarjoamme monipuolisia yhteistyövaihtoehtoja:
+                                    </p>
+                                    <ul>
+                                        <li><strong>Kumppanuudet:</strong> Pitkäaikaiset kumppanuudet ja jatkuva yhteistyö</li>
+                                        <li><strong>Tukipalvelut:</strong> Täysin hallinnoitu tuki ja ylläpito</li>
+                                        <li><strong>Tieto- ja analyytikkojen koulutus:</strong> Jatkuva koulutus ja parhaat käytännöt</li>
+                                        <li><strong>Tieto- ja analyytikkojen koulutus:</strong> Jatkuva koulutus ja parhaat käytännöt</li>
+                                        <li><strong>Tieto- ja analyytikkojen koulutus:</strong> Jatkuva koulutus ja parhaat käytännöt</li>
+                                    </ul>
+                                    <p>
+                                        Yhteistyö on meidän ensiarvoisen tärkeä asia. Tarjoamme monipuolisia yhteistyövaihtoehtoja:
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="accordion-item">
+                            <h4 class="accordion-header">
+                                <button 
+                                    class="accordion-button collapsed" 
+                                    type="button" 
+                                    data-bs-target="#collaboration2" 
+                                    aria-expanded="false" 
+                                    aria-controls="collaboration2"
+                                >
+                                    Miten voimme yhteistyötä?
+                                </button>
+                            </h4>
+                            <div id="collaboration2" class="accordion-collapse collapse" data-bs-parent="#collaborationAccordion">
+                                <div class="accordion-body">
+                                    <p>
+                                        Yhteistyö on meidän ensiarvoisen tärkeä asia. Tarjoamme monipuolisia yhteistyövaihtoehtoja:
+                                    </p>
+                                    <ul>
+                                        <li><strong>Kumppanuudet:</strong> Pitkäaikaiset kumppanuudet ja jatkuva yhteistyö</li>
+                                        <li><strong>Tukipalvelut:</strong> Täysin hallinnoitu tuki ja ylläpito</li>
+                                        <li><strong>Tieto- ja analyytikkojen koulutus:</strong> Jatkuva koulutus ja parhaat käytännöt</li>
+                                        <li><strong>Tieto- ja analyytikkojen koulutus:</strong> Jatkuva koulutus ja parhaat käytännöt</li>
+                                        <li><strong>Tieto- ja analyytikkojen koulutus:</strong> Jatkuva koulutus ja parhaat käytännöt</li>
+                                    </ul>
+                                    <p>
+                                        Yhteistyö on meidän ensiarvoisen tärkeä asia. Tarjoamme monipuolisia yhteistyövaihtoehtoja:
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+        
+        <!-- Yhteistyö ja Projektinhallinta -->
+        <div class="reveal mb-5">
+            <h3 class="text-primary mb-4">
+                <i class="bi bi-chat-dots me-2"></i>
+                Yhteistyö ja projektinhallinta
+            </h3>
+            <div class="accordion" id="collaborationAccordion">
+                <div class="accordion-item">
+                    <h4 class="accordion-header">
+                        <button 
+                            class="accordion-button collapsed" 
+                            type="button" 
+                            data-bs-target="#collab1" 
+                            aria-expanded="false" 
+                            aria-controls="collab1"
+                        >
+                            Kuinka usein viestimme projektin aikana?
+                        </button>
+                    </h4>
+                    <div id="collab1" class="accordion-collapse collapse" data-bs-parent="#collaborationAccordion">
+                        <div class="accordion-body">
+                            <p>Viestimme läpinäkyvästi ja säännöllisesti:</p>
+                            <ul>
+                                <li>Viikoittaiset sprinttikatselmukset ja tilannepäivitykset</li>
+                                <li>Kanavat: Teams/Slack ja sähköposti</li>
+                                <li>Projektitaulu: Jira/Asana/DevOps sovitusti</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h4 class="accordion-header">
+                        <button 
+                            class="accordion-button collapsed" 
+                            type="button" 
+                            data-bs-target="#collab2" 
+                            aria-expanded="false" 
+                            aria-controls="collab2"
+                        >
+                            Kuka omistaa datan ja ratkaisut?
+                        </button>
+                    </h4>
+                    <div id="collab2" class="accordion-collapse collapse" data-bs-parent="#collaborationAccordion">
+                        <div class="accordion-body">
+                            <p>Asiakas omistaa aina oman datansa ja valmiit ratkaisut. Noudatamme sovittuja lisenssi- ja IPR-ehtoja.</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="accordion-item">
+                    <h4 class="accordion-header">
+                        <button 
+                            class="accordion-button collapsed" 
+                            type="button" 
+                            data-bs-target="#collab3" 
+                            aria-expanded="false" 
+                            aria-controls="collab3"
+                        >
+                            Miten mittaamme onnistumista?
+                        </button>
+                    </h4>
+                    <div id="collab3" class="accordion-collapse collapse" data-bs-parent="#collaborationAccordion">
+                        <div class="accordion-body">
+                            <p>Määritämme yhdessä KPI:t ja tavoitteet alussa ja seuraamme niitä säännöllisesti (esim. käyttöaste, ROI, läpimenoaika, virhemäärä).</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
             </div>
         </div>
@@ -432,10 +672,6 @@ include 'partials/header.php';
                         <a href="contact.php" class="btn btn-primary btn-lg">
                             <i class="bi bi-chat-dots me-2"></i>
                             Kysy lisää
-                        </a>
-                        <a href="mailto:admin@clearnexa.com" class="btn btn-outline-primary btn-lg">
-                            <i class="bi bi-envelope me-2"></i>
-                            Lähetä sähköpostia
                         </a>
                     </div>
                 </div>

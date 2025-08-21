@@ -1291,33 +1291,7 @@ const App = {
     },
 
     enhanceFAQPage() {
-        // Add search functionality to FAQ
-        const searchInput = document.createElement('input');
-        searchInput.type = 'text';
-        searchInput.placeholder = 'Etsi kysymyksiä...';
-        searchInput.className = 'form-control mb-4';
-        
-        const faqContent = document.querySelector('#faq-content');
-        if (faqContent) {
-            faqContent.insertBefore(searchInput, faqContent.firstChild);
-            
-            searchInput.addEventListener('input', Utils.debounce(() => {
-                this.filterFAQItems(searchInput.value);
-            }, 300));
-        }
-    },
-
-    filterFAQItems(query) {
-        const items = document.querySelectorAll('.accordion-item');
-        const searchTerm = query.toLowerCase();
-        
-        items.forEach(item => {
-            const question = item.querySelector('.accordion-button').textContent.toLowerCase();
-            const answer = item.querySelector('.accordion-body').textContent.toLowerCase();
-            
-            const matches = question.includes(searchTerm) || answer.includes(searchTerm);
-            item.style.display = matches ? 'block' : 'none';
-        });
+        // FAQ search removed per request
     }
 };
 
