@@ -3,6 +3,7 @@
 $meta_title = "Clearnexa Analytics Co. - Data-analytiikka ja liiketoimintatiedon asiantuntijat Suomessa";
 $meta_description = "Clearnexa Analytics Co. tarjoaa edistyneitä data-analytiikka- ja liiketoimintatiedon ratkaisuja yrityksille. BI, visualisointi, ennustava analytiikka ja big data -palvelut Suomessa.";
 $meta_keywords = "data-analytiikka, liiketoimintatiedon hallinta, BI, business intelligence, datan visualisointi, ennustava analytiikka, big data, ETL, data governance, Suomi";
+$page_class = 'page-index';
 
 include 'partials/header.php';
 ?>

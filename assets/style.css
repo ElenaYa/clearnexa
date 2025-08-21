@@ -323,6 +323,25 @@ img {
   color: var(--primary) !important;
   text-decoration: none !important;
   transition: var(--transition-base);
+  display: flex;
+  align-items: center;
+}
+
+.navbar-brand img {
+  height: 38px !important;
+  width: auto !important;
+  filter: drop-shadow(0 2px 4px rgba(255, 194, 71, 0.2));
+  transition: var(--transition-base);
+}
+
+.navbar-brand:hover img {
+  filter: drop-shadow(0 4px 8px rgba(255, 194, 71, 0.3));
+  transform: scale(1.05);
+}
+
+.navbar-brand:hover img {
+  filter: drop-shadow(0 4px 8px rgba(255, 194, 71, 0.3));
+  transform: scale(1.05);
 }
 
 .navbar-brand:hover {
@@ -864,6 +883,12 @@ img {
   min-height: 100svh;
 }
 
+/* Remove full height for hero sections on pages other than index and about */
+body:not(.page-index):not(.page-about) .hero {
+  min-height: auto;
+  padding: var(--space-3xl) 0;
+}
+
 .hero::before {
   content: '';
   position: absolute;
@@ -1072,6 +1097,74 @@ img {
 
 .footer .btn.btn-primary {
   box-shadow: none;
+}
+
+.footer h5 img {
+  height: 50px !important;
+  width: auto !important;
+  filter: drop-shadow(0 2px 4px rgba(255, 194, 71, 0.15));
+  transition: var(--transition-base);
+  border-radius: var(--radius-sm);
+}
+
+.footer h5:hover img {
+  filter: drop-shadow(0 4px 8px rgba(255, 194, 71, 0.25));
+  transform: scale(1.02);
+}
+
+/* Services Navigation */
+.services-nav {
+  margin-bottom: var(--space-xl);
+}
+
+.service-nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-lg);
+  background: var(--surface);
+  border: 1px solid rgba(255, 194, 71, 0.1);
+  border-radius: var(--radius-xl) var(--radius-md) var(--radius-xl) var(--radius-md);
+  text-decoration: none;
+  color: var(--text);
+  transition: all var(--transition-base);
+  text-align: center;
+  height: 100%;
+}
+
+.service-nav-item:hover {
+  border-color: var(--primary);
+  background: linear-gradient(135deg, rgba(255, 194, 71, 0.05), rgba(255, 96, 110, 0.05));
+  color: var(--primary);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+
+.service-nav-icon {
+  font-size: var(--text-2xl);
+  color: var(--primary);
+  margin-bottom: var(--space-sm);
+  transition: var(--transition-base);
+}
+
+.service-nav-item:hover .service-nav-icon {
+  transform: scale(1.1);
+}
+
+.service-nav-item span {
+  font-weight: 600;
+  font-size: var(--text-sm);
+}
+
+/* Mobile button spacing for services page */
+@media (max-width: 768px) {
+  .page-services .btn {
+    margin-bottom: var(--space-md);
+  }
+  
+  .page-services .btn:last-child {
+    margin-bottom: 16px;
+  }
 }
 
 /* Footer checkbox: keep perfect square and prevent shrinking */

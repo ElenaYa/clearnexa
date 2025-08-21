@@ -33,7 +33,8 @@
     <meta name="twitter:description" content="Data-analytiikka ja liiketoimintatiedon asiantuntijat">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="icon" type="image/png" href="images/favicon.png">
+    <link rel="shortcut icon" type="image/png" href="images/favicon.png">
     
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -71,14 +72,13 @@
     }
     </script>
 </head>
-<body>
+<body<?php if (isset($page_class)): ?> class="<?= htmlspecialchars($page_class) ?>"<?php endif; ?>>
 
 <header class="angle-banner">
     <div class="container">
         <nav class="navbar navbar-expand-lg">
             <a class="navbar-brand" href="index.php">
-                <i class="bi bi-graph-up-arrow me-2"></i>
-                Clearnexa
+                <img src="images/logo-header.webp" alt="Clearnexa Analytics Co." height="28" class="me-2">
             </a>
             
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Avaa navigaatio">

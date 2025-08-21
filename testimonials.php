@@ -1,9 +1,12 @@
-<?php include 'partials/header.php'; ?>
+<?php 
+$page_class = 'page-testimonials';
+include 'partials/header.php'; 
+?>
 
 <!-- Hero Section -->
 <section class="section hero">
     <div class="container">
-        <div class="row align-items-center min-vh-100">
+        <div class="row align-items-center">
             <div class="col-lg-8 mx-auto text-center">
                 <div class="reveal">
                     <h1 class="mb-4">

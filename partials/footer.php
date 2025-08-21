@@ -5,8 +5,7 @@
             <div class="col-lg-4 mb-4">
                 <div class="reveal" data-delay="0">
                     <h5 class="text-gradient mb-3">
-                        <i class="bi bi-graph-up-arrow me-2"></i>
-                        Clearnexa Analytics Co.
+                        <img src="images/logo-footer.webp" alt="Clearnexa Analytics Co." height="20" class="me-2">
                     </h5>
                     <p class="text-muted mb-3">
                         Edistyneitä data-analytiikka- ja liiketoimintatiedon ratkaisuja, 
@@ -48,6 +47,18 @@
                             <a href="services.php#bigdata" class="text-muted text-decoration-none">
                                 <i class="bi bi-arrow-right me-2"></i>
                                 Big Data -ratkaisut
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="services.php#etl" class="text-muted text-decoration-none">
+                                <i class="bi bi-arrow-right me-2"></i>
+                                Data Engineering & ETL
+                            </a>
+                        </li>
+                        <li class="mb-2">
+                            <a href="services.php#governance" class="text-muted text-decoration-none">
+                                <i class="bi bi-arrow-right me-2"></i>
+                                Data Governance & Compliance
                             </a>
                         </li>
                     </ul>

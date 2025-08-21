@@ -1,10 +1,13 @@
 
-<?php include 'partials/header.php'; ?>
+<?php 
+$page_class = 'page-contact';
+include 'partials/header.php'; 
+?>
 
 <!-- Hero Section -->
 <section class="section hero">
     <div class="container">
-        <div class="row align-items-center min-vh-100">
+        <div class="row align-items-center">
             <div class="col-lg-8 mx-auto text-center">
                 <div class="reveal">
                     <h1 class="mb-4">
@@ -18,9 +21,9 @@
                     <div class="d-flex justify-content-center gap-4 mb-4">
                         <div class="d-flex align-items-center">
                             <i class="bi bi-envelope text-primary me-2 fs-5"></i>
-                            <a href="mailto:admin@clearnexa.com" class="text-primary text-decoration-none">
+                            <span class="text-primary text-decoration-none">
                                 admin@clearnexa.com
-                            </a>
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -330,10 +333,10 @@
                             <i class="bi bi-arrow-up me-2"></i>
                             Täytä lomake
                         </a>
-                        <a href="mailto:admin@clearnexa.com" class="btn btn-outline-primary btn-lg">
+                        <span class="btn btn-outline-primary btn-lg">
                             <i class="bi bi-envelope me-2"></i>
                             Lähetä sähköpostia
-                        </a>
+                        </span>
                     </div>
                 </div>
             </div>

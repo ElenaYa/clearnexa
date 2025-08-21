@@ -1,5 +1,8 @@
 
-<?php include 'partials/header.php'; ?>
+<?php 
+$page_class = 'page-about';
+include 'partials/header.php'; 
+?>
 
 <!-- Hero Section -->
 <section class="section hero">

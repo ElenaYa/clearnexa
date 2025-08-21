@@ -1,10 +1,13 @@
 
-<?php include 'partials/header.php'; ?>
+<?php 
+$page_class = 'page-services';
+include 'partials/header.php'; 
+?>
 
 <!-- Hero Section -->
 <section class="section hero">
     <div class="container">
-        <div class="row align-items-center min-vh-100">
+        <div class="row align-items-center">
             <div class="col-lg-8 mx-auto text-center">
                 <div class="reveal">
                     <h1 class="mb-4">
@@ -18,6 +21,71 @@
                         <i class="bi bi-arrow-down me-2"></i>
                         Tutustu palveluihin
                     </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Navigation -->
+<section class="section section-alt">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <div class="reveal">
+                    <h3 class="text-center mb-4">Valitse palvelu</h3>
+                    <div class="services-nav">
+                        <div class="row g-3 justify-content-center">
+                            <div class="col-lg-2 col-md-4 col-6">
+                                <a href="#bi" class="service-nav-item">
+                                    <div class="service-nav-icon">
+                                        <i class="bi bi-graph-up-arrow"></i>
+                                    </div>
+                                    <span>BI</span>
+                                </a>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-6">
+                                <a href="#visualization" class="service-nav-item">
+                                    <div class="service-nav-icon">
+                                        <i class="bi bi-pie-chart-fill"></i>
+                                    </div>
+                                    <span>Visualisointi</span>
+                                </a>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-6">
+                                <a href="#predictive" class="service-nav-item">
+                                    <div class="service-nav-icon">
+                                        <i class="bi bi-lightning-charge-fill"></i>
+                                    </div>
+                                    <span>Ennustava</span>
+                                </a>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-6">
+                                <a href="#bigdata" class="service-nav-item">
+                                    <div class="service-nav-icon">
+                                        <i class="bi bi-hdd-stack-fill"></i>
+                                    </div>
+                                    <span>Big Data</span>
+                                </a>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-6">
+                                <a href="#etl" class="service-nav-item">
+                                    <div class="service-nav-icon">
+                                        <i class="bi bi-gear-fill"></i>
+                                    </div>
+                                    <span>ETL</span>
+                                </a>
+                            </div>
+                            <div class="col-lg-2 col-md-4 col-6">
+                                <a href="#governance" class="service-nav-item">
+                                    <div class="service-nav-icon">
+                                        <i class="bi bi-shield-check"></i>
+                                    </div>
+                                    <span>Governance</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -52,6 +120,12 @@
                         raportteja. Muutamme raakadatan ymmärrettäviksi 
                         liiketoimintatiedoiksi.
                     </p>
+
+                    <p class="text-muted mb-4">
+                        Asiantuntijamme auttavat sinua hyödyntämään dataa tehokkaasti 
+                        ja tekemään tietoon perustuvia päätöksiä. Tarjoamme kattavan 
+                        tuen BI-ratkaisun käyttöönotosta jatkuvaan kehittämiseen.
+                    </p>
                     
                     <h5 class="text-primary mb-3">Toimitukset:</h5>
                     <ul class="text-muted mb-4">
@@ -60,10 +134,21 @@
                         <li>KPI-seurantajärjestelmä</li>
                         <li>Käyttäjäkoulutus</li>
                     </ul>
+
+                    <a href="/contact.php" class="btn btn-primary">
+                        <i class="bi bi-envelope me-2"></i>
+                        Ota yhteyttä
+                    </a>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="reveal">
+                    <img 
+                        src="images/business-intelligence.webp" 
+                        alt="Liiketoimintatiedon hallinta dashboard esimerkki" 
+                        class="img-fluid rounded mb-4"
+                        style="border-radius: 24px 8px 24px 8px !important;"
+                    >
                     <div class="card-diagonal p-4">
                         <h5 class="text-primary mb-3">Esimerkkejä KPI:stä:</h5>
                         <div class="row g-3 mb-4">
@@ -107,6 +192,61 @@
     </div>
 </section>
 
+<!-- BI Benefits -->
+<section class="section bg-surface">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <div class="reveal">
+                    <h3 class="text-primary mb-4">Miksi valita BI-ratkaisumme?</h3>
+                    <p class="lead text-muted mb-5">
+                        Modernit BI-työkalumme ja asiantuntijatiimimme varmistavat, että saat 
+                        kaiken hyödyn irti datastasi
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card-diagonal p-4 h-100 reveal">
+                    <div class="service-icon mb-3">
+                        <i class="bi bi-lightning-charge"></i>
+                    </div>
+                    <h5 class="text-primary mb-3">Nopea käyttöönotto</h5>
+                    <p class="text-muted mb-0">
+                        Kokenut tiimimme varmistaa nopean ja tehokkaan implementoinnin, 
+                        jotta pääset hyödyntämään dataa mahdollisimman pian
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-diagonal p-4 h-100 reveal">
+                    <div class="service-icon mb-3">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+                    <h5 class="text-primary mb-3">Luotettava kumppani</h5>
+                    <p class="text-muted mb-0">
+                        Tarjoamme jatkuvan tuen ja kehityksen varmistaaksemme 
+                        BI-ratkaisusi pitkäaikaisen menestyksen
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-diagonal p-4 h-100 reveal">
+                    <div class="service-icon mb-3">
+                        <i class="bi bi-graph-up"></i>
+                    </div>
+                    <h5 class="text-primary mb-3">Mitattavat tulokset</h5>
+                    <p class="text-muted mb-0">
+                        Seuraamme ja raportoimme säännöllisesti BI-ratkaisun 
+                        tuottamista hyödyistä liiketoiminnallesi
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Data Visualization Service -->
 <section id="visualization" class="section">
     <div class="container">
@@ -123,6 +263,8 @@
                         <li>Esitykset eivät vakuuta sidosryhmiä</li>
                         <li>Trendit ja kuviot jäävät huomaamatta</li>
                         <li>Tiedon välittäminen on tehottonta</li>
+                        <li>Datan analysointi vie liikaa aikaa</li>
+                        <li>Päätöksenteko perustuu vajavaiseen tietoon</li>
                     </ul>
                     
                     <h5 class="text-primary mb-3">Ratkaisumme:</h5>
@@ -132,17 +274,35 @@
                         numerot selkeiksi tarinoiksi, jotka inspiroivat toimintaan.
                     </p>
                     
+                    <p class="text-muted mb-4">
+                        Hyödynnämme uusimpia visualisointiteknologioita ja parhaita käytäntöjä
+                        luodaksemme intuitiivisia ja informatiivisia näkymiä. Räätälöimme ratkaisut
+                        vastaamaan juuri teidän tarpeitanne.
+                    </p>
+                    
                     <h5 class="text-primary mb-3">Toimitukset:</h5>
                     <ul class="text-muted mb-4">
                         <li>Interaktiiviset visualisoinnit</li>
                         <li>Räätälöidyt raporttimallit</li>
                         <li>Reaaliaikaiset näkymät</li>
                         <li>Mobiiliystävälliset dashboardit</li>
+                        <li>Automatisoitu raportointi</li>
+                        <li>Tiedon jakamisen työkalut</li>
                     </ul>
+
+                    <a href="/contact" class="btn btn-primary">
+                        <i class="bi bi-envelope me-2"></i>Ota yhteyttä
+                    </a>
                 </div>
             </div>
             <div class="col-lg-6 order-lg-1">
                 <div class="reveal">
+                    <img 
+                        src="images/data-visualization.webp" 
+                        alt="Datan visualisointi esimerkkejä ja kaavioita" 
+                        class="img-fluid rounded mb-4"
+                        style="border-radius: 24px 8px 24px 8px !important;"
+                    >
                     <div class="card-diagonal p-4">
                         <h5 class="text-primary mb-3">Esimerkkejä KPI:stä:</h5>
                         <div class="row g-3 mb-4">
@@ -186,6 +346,58 @@
     </div>
 </section>
 
+<!-- Additional Benefits -->
+<section class="section section-alt">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <div class="reveal">
+                    <h3 class="text-primary mb-4">Visualisoinnin hyödyt</h3>
+                    <p class="lead text-muted mb-5">
+                        Tehokas datan visualisointi auttaa tekemään parempia päätöksiä ja 
+                        löytämään uusia mahdollisuuksia liiketoiminnassasi
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card-diagonal p-4 h-100 reveal">
+                    <div class="service-icon mb-3">
+                        <i class="bi bi-lightbulb"></i>
+                    </div>
+                    <h5 class="text-primary mb-3">Oivallukset</h5>
+                    <p class="text-muted mb-0">
+                        Löydä uusia näkökulmia ja trendejä datasta visuaalisten työkalujen avulla
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-diagonal p-4 h-100 reveal">
+                    <div class="service-icon mb-3">
+                        <i class="bi bi-clock-history"></i>
+                    </div>
+                    <h5 class="text-primary mb-3">Säästä aikaa</h5>
+                    <p class="text-muted mb-0">
+                        Automatisoidut visualisoinnit vapauttavat aikaa tärkeämpiin tehtäviin
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card-diagonal p-4 h-100 reveal">
+                    <div class="service-icon mb-3">
+                        <i class="bi bi-people"></i>
+                    </div>
+                    <h5 class="text-primary mb-3">Parempi viestintä</h5>
+                    <p class="text-muted mb-0">
+                        Selkeät visualisoinnit tekevät viestinnästä tehokkaampaa kaikille sidosryhmille
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Predictive Analytics Service -->
 <section id="predictive" class="section section-alt">
     <div class="container">
@@ -202,6 +414,7 @@
                         <li>Asiakkaiden käyttäytyminen on arvaamatonta</li>
                         <li>Riskinhallinta perustuu tunteeseen</li>
                         <li>Markkinamuutokset tulevat yllätyksenä</li>
+                        <li>Kilpailuedun menettäminen puutteellisen ennakoinnin vuoksi</li>
                     </ul>
                     
                     <h5 class="text-primary mb-3">Ratkaisumme:</h5>
@@ -211,6 +424,12 @@
                         ja liiketoiminnan kehitystä. Annamme teille työkalut 
                         proaktiiviseen päätöksentekoon.
                     </p>
+
+                    <p class="text-muted mb-4">
+                        Ratkaisumme hyödyntävät uusimpia tekoälyteknologioita ja 
+                        koneoppimismalleja, jotka oppivat jatkuvasti datasta ja 
+                        parantavat ennusteiden tarkkuutta ajan myötä.
+                    </p>
                     
                     <h5 class="text-primary mb-3">Toimitukset:</h5>
                     <ul class="text-muted mb-4">
@@ -218,11 +437,25 @@
                         <li>Riskinarviointijärjestelmät</li>
                         <li>Asiakassegmentointimallit</li>
                         <li>Automaattiset hälytykset</li>
+                        <li>Reaaliaikaiset analyysityökalut</li>
+                        <li>Räätälöidyt raportointiratkaisut</li>
                     </ul>
+
+                    <div class="text-center mt-5">
+                        <a href="contact.php" class="btn btn-primary btn-lg">
+                            <i class="bi bi-envelope me-2"></i>Ota yhteyttä
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="reveal">
+                    <img 
+                        src="images/predictive-analytics.webp" 
+                        alt="Ennustava analytiikka ja koneoppimismallit" 
+                        class="img-fluid rounded mb-4"
+                        style="border-radius: 24px 8px 24px 8px !important;"
+                    >
                     <div class="card-diagonal p-4">
                         <h5 class="text-primary mb-3">Esimerkkejä KPI:stä:</h5>
                         <div class="row g-3 mb-4">
@@ -266,6 +499,69 @@
     </div>
 </section>
 
+<!-- Additional Analytics Benefits -->
+<section class="section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <div class="reveal">
+                    <h3 class="text-primary mb-4">Ennustavan analytiikan edut</h3>
+                    <p class="lead text-muted mb-5">
+                        Modernit ennustavat analytiikkaratkaisut tuovat merkittäviä 
+                        kilpailuetuja ja tehostavat liiketoimintaasi
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="row g-4">
+            <div class="col-md-3">
+                <div class="card-diagonal p-4 h-100 reveal">
+                    <div class="service-icon mb-3">
+                        <i class="bi bi-graph-up"></i>
+                    </div>
+                    <h5 class="text-primary mb-3">Kasvu</h5>
+                    <p class="text-muted mb-0">
+                        Tunnista kasvumahdollisuudet ja optimoi liiketoimintasi kehitys
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card-diagonal p-4 h-100 reveal">
+                    <div class="service-icon mb-3">
+                        <i class="bi bi-shield-check"></i>
+                    </div>
+                    <h5 class="text-primary mb-3">Riskinhallinta</h5>
+                    <p class="text-muted mb-0">
+                        Ennakoi ja minimoi liiketoiminnan riskit tehokkaasti
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card-diagonal p-4 h-100 reveal">
+                    <div class="service-icon mb-3">
+                        <i class="bi bi-people-fill"></i>
+                    </div>
+                    <h5 class="text-primary mb-3">Asiakasymmärrys</h5>
+                    <p class="text-muted mb-0">
+                        Syvennä asiakasymmärrystä ja paranna asiakaskokemusta
+                    </p>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div class="card-diagonal p-4 h-100 reveal">
+                    <div class="service-icon mb-3">
+                        <i class="bi bi-gear-fill"></i>
+                    </div>
+                    <h5 class="text-primary mb-3">Automaatio</h5>
+                    <p class="text-muted mb-0">
+                        Automatisoi prosesseja ja tehosta toimintaa
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 <!-- Big Data Solutions Service -->
 <section id="bigdata" class="section">
     <div class="container">
@@ -282,6 +578,8 @@
                         <li>Perinteiset järjestelmät eivät pysty käsittelemään dataa</li>
                         <li>Datan laatu ja yhtenäisyys on heikkoa</li>
                         <li>Reaaliaikainen prosessointi on mahdotonta</li>
+                        <li>Tietoturva ja yksityisyys ovat vaarassa</li>
+                        <li>Datan säilytys ja arkistointi on haastavaa</li>
                     </ul>
                     
                     <h5 class="text-primary mb-3">Ratkaisumme:</h5>
@@ -289,6 +587,8 @@
                         Rakennamme skaalautuvia big data -arkkitehtuureja, jotka 
                         käsittelevät tehokkaasti massiivisia datamääriä. Käytämme 
                         moderneja teknologioita, kuten Hadoop, Spark ja pilvipalveluita.
+                        Tarjoamme kokonaisvaltaisia ratkaisuja datan keräämisestä 
+                        analysointiin ja visualisointiin.
                     </p>
                     
                     <h5 class="text-primary mb-3">Toimitukset:</h5>
@@ -297,11 +597,25 @@
                         <li>Reaaliaikainen datavirtojen käsittely</li>
                         <li>Data lake -ratkaisut</li>
                         <li>Suorituskyvyn optimointi</li>
+                        <li>Tietoturvalliset tallennusratkaisut</li>
+                        <li>Automatisoitu datan elinkaarenhallinta</li>
                     </ul>
+
+                    <div class="mt-4">
+                        <a href="contact.php" class="btn btn-primary">
+                            <i class="bi bi-envelope me-2"></i>Ota yhteyttä
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="col-lg-6 order-lg-1">
                 <div class="reveal">
+                    <img 
+                        src="images/big-data-architecture.webp" 
+                        alt="Big Data arkkitehtuuri ja skaalautuvat järjestelmät" 
+                        class="img-fluid rounded mb-4"
+                        style="border-radius: 24px 8px 24px 8px !important;"
+                    >
                     <div class="card-diagonal p-4">
                         <h5 class="text-primary mb-3">Esimerkkejä KPI:stä:</h5>
                         <div class="row g-3 mb-4">
@@ -342,6 +656,43 @@
                 </div>
             </div>
         </div>
+
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="card-diagonal p-4 reveal">
+                    <h4 class="text-primary mb-4">Miksi valita meidän Big Data -ratkaisumme?</h4>
+                    <div class="row g-4">
+                        <div class="col-md-4">
+                            <div class="d-flex align-items-start">
+                                <i class="bi bi-shield-check text-primary fs-4 me-3"></i>
+                                <div>
+                                    <h6 class="text-primary">Luotettavuus</h6>
+                                    <p class="text-muted mb-0">Varmat ja testatut ratkaisut, jotka takaavat datan eheyden</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="d-flex align-items-start">
+                                <i class="bi bi-graph-up text-primary fs-4 me-3"></i>
+                                <div>
+                                    <h6 class="text-primary">Skaalautuvuus</h6>
+                                    <p class="text-muted mb-0">Järjestelmät kasvavat liiketoimintasi mukana</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4">
+                            <div class="d-flex align-items-start">
+                                <i class="bi bi-gear-wide-connected text-primary fs-4 me-3"></i>
+                                <div>
+                                    <h6 class="text-primary">Integroitavuus</h6>
+                                    <p class="text-muted mb-0">Saumaton yhteensopivuus olemassa olevien järjestelmien kanssa</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -361,6 +712,8 @@
                         <li>Tiedonsiirrot ovat manuaalisia ja virhealttiita</li>
                         <li>Datan laatu vaihtelee lähteiden välillä</li>
                         <li>Integraatiot ovat monimutkaisia ja hitaita</li>
+                        <li>Datan analysointi vie liikaa aikaa</li>
+                        <li>Reaaliaikaisen datan hyödyntäminen on haastavaa</li>
                     </ul>
                     
                     <h5 class="text-primary mb-3">Ratkaisumme:</h5>
@@ -370,6 +723,13 @@
                         automaattisia tiedonsiirtoproduktioita, jotka varmistavat 
                         datan laadun ja yhtenäisyyden.
                     </p>
+
+                    <p class="text-muted mb-4">
+                        Modernit ETL-ratkaisumme mahdollistavat reaaliaikaisen 
+                        datan käsittelyn ja analysoinnin. Hyödynnämme uusimpia 
+                        teknologioita varmistaaksemme tehokkaan ja luotettavan 
+                        datankäsittelyn.
+                    </p>
                     
                     <h5 class="text-primary mb-3">Toimitukset:</h5>
                     <ul class="text-muted mb-4">
@@ -377,11 +737,25 @@
                         <li>Datan laatuseurantajärjestelmät</li>
                         <li>Reaaliaikaiset integraatiot</li>
                         <li>Datan versionhallinta</li>
+                        <li>Automatisoitu raportointi</li>
+                        <li>Datan validointi ja puhdistus</li>
                     </ul>
+
+                    <div class="text-center mt-4">
+                        <a href="contact.php" class="btn btn-primary btn-lg">
+                            <i class="bi bi-envelope me-2"></i>Pyydä tarjous
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="col-lg-6">
                 <div class="reveal">
+                    <img 
+                        src="images/etl-pipeline.webp" 
+                        alt="ETL putket ja datan prosessointi" 
+                        class="img-fluid rounded mb-4"
+                        style="border-radius: 24px 8px 24px 8px !important;"
+                    >
                     <div class="card-diagonal p-4">
                         <h5 class="text-primary mb-3">Esimerkkejä KPI:stä:</h5>
                         <div class="row g-3 mb-4">
@@ -422,6 +796,53 @@
                 </div>
             </div>
         </div>
+
+        <!-- Additional ETL Benefits -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="card-diagonal p-4 reveal">
+                    <h4 class="text-primary mb-4">ETL-ratkaisujen hyödyt</h4>
+                    <div class="row g-4">
+                        <div class="col-md-3">
+                            <div class="d-flex align-items-start">
+                                <i class="bi bi-lightning text-primary fs-4 me-3"></i>
+                                <div>
+                                    <h6 class="text-primary">Tehokkuus</h6>
+                                    <p class="text-muted mb-0">Nopeat ja automatisoidut dataprosessit</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="d-flex align-items-start">
+                                <i class="bi bi-check-circle text-primary fs-4 me-3"></i>
+                                <div>
+                                    <h6 class="text-primary">Tarkkuus</h6>
+                                    <p class="text-muted mb-0">Virheetön datan käsittely</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="d-flex align-items-start">
+                                <i class="bi bi-clock-history text-primary fs-4 me-3"></i>
+                                <div>
+                                    <h6 class="text-primary">Säästöt</h6>
+                                    <p class="text-muted mb-0">Merkittävät aikasäästöt</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="d-flex align-items-start">
+                                <i class="bi bi-graph-up text-primary fs-4 me-3"></i>
+                                <div>
+                                    <h6 class="text-primary">Skaalautuvuus</h6>
+                                    <p class="text-muted mb-0">Kasvaa tarpeiden mukana</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </section>
 
@@ -441,6 +862,8 @@
                         <li>Datan omistajuus ja vastuut ovat epäselviä</li>
                         <li>Tietoturvariskit kasvavat jatkuvasti</li>
                         <li>Datan laadulle ei ole selkeitä standardeja</li>
+                        <li>Tietosuojakäytännöt vaativat jatkuvaa päivittämistä</li>
+                        <li>Kansainväliset säädökset tuovat lisähaasteita</li>
                     </ul>
                     
                     <h5 class="text-primary mb-3">Ratkaisumme:</h5>
@@ -449,6 +872,13 @@
                         säädösten noudattamisen, datan turvallisuuden ja laadun. 
                         Määrittelemme selkeät prosessit ja vastuut datan hallinnalle.
                     </p>
+
+                    <p class="text-muted mb-4">
+                        Tarjoamme jatkuvaa tukea ja konsultointia tietosuoja-asioissa,
+                        sekä autamme organisaatiotasi pysymään ajan tasalla muuttuvien
+                        säädösten kanssa. Kehitämme myös automaattisia työkaluja
+                        compliance-seurantaan.
+                    </p>
                     
                     <h5 class="text-primary mb-3">Toimitukset:</h5>
                     <ul class="text-muted mb-4">
@@ -456,11 +886,25 @@
                         <li>Compliance-seurantajärjestelmät</li>
                         <li>Tietoturva-auditoinnit</li>
                         <li>Henkilökunnan koulutus</li>
+                        <li>Automaattiset compliance-työkalut</li>
+                        <li>Säännölliset tietoturvaraportit</li>
                     </ul>
+
+                    <div class="text-center mt-5">
+                        <a href="contact.php" class="btn btn-primary btn-lg">
+                            <i class="bi bi-envelope me-2"></i>Ota yhteyttä
+                        </a>
+                    </div>
                 </div>
             </div>
             <div class="col-lg-6 order-lg-1">
                 <div class="reveal">
+                    <img 
+                        src="images/data-governance.webp" 
+                        alt="Data governance ja compliance seuranta" 
+                        class="img-fluid rounded mb-4"
+                        style="border-radius: 24px 8px 24px 8px !important;"
+                    >
                     <div class="card-diagonal p-4">
                         <h5 class="text-primary mb-3">Esimerkkejä KPI:stä:</h5>
                         <div class="row g-3 mb-4">
@@ -496,6 +940,53 @@
                             <span class="badge bg-primary"><i class="bi bi-file-lock me-1"></i>Varonis</span>
                             <span class="badge bg-primary"><i class="bi bi-search me-1"></i>Alation</span>
                             <span class="badge bg-primary"><i class="bi bi-graph-up me-1"></i>Informatica</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Additional Governance Benefits -->
+        <div class="row mt-5">
+            <div class="col-12">
+                <div class="card-diagonal p-4 reveal">
+                    <h4 class="text-primary mb-4">Data Governance -ratkaisujen edut</h4>
+                    <div class="row g-4">
+                        <div class="col-md-3">
+                            <div class="d-flex align-items-start">
+                                <i class="bi bi-shield-lock text-primary fs-4 me-3"></i>
+                                <div>
+                                    <h6 class="text-primary">Tietoturva</h6>
+                                    <p class="text-muted mb-0">Vahva suoja tietomurtoja vastaan</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="d-flex align-items-start">
+                                <i class="bi bi-check2-circle text-primary fs-4 me-3"></i>
+                                <div>
+                                    <h6 class="text-primary">Compliance</h6>
+                                    <p class="text-muted mb-0">Säädöstenmukaisuuden varmistaminen</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="d-flex align-items-start">
+                                <i class="bi bi-graph-up-arrow text-primary fs-4 me-3"></i>
+                                <div>
+                                    <h6 class="text-primary">Tehokkuus</h6>
+                                    <p class="text-muted mb-0">Optimoidut dataprosessit</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-3">
+                            <div class="d-flex align-items-start">
+                                <i class="bi bi-people text-primary fs-4 me-3"></i>
+                                <div>
+                                    <h6 class="text-primary">Luottamus</h6>
+                                    <p class="text-muted mb-0">Vahvempi asiakasluottamus</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
