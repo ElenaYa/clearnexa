@@ -4,7 +4,6 @@ $page_class = 'page-legal page-disclaimer';
 include 'partials/header.php'; 
 ?>
 
-<!-- Disclaimer Section -->
 <section class="section">
     <div class="container">
         <div class="row">

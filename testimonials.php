@@ -3,7 +3,6 @@ $page_class = 'page-testimonials';
 include 'partials/header.php'; 
 ?>
 
-<!-- Hero Section -->
 <section class="section hero">
     <div class="container">
         <div class="row align-items-center">
@@ -37,7 +36,6 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- Testimonials Grid -->
 <section class="section section-alt">
     <div class="container">
         <div class="row g-4">
@@ -323,7 +321,6 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- Before/After Metrics Section -->
 <section class="section">
     <div class="container">
         <div class="row">
@@ -423,7 +420,6 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- Industry Success Stories -->
 <section class="section section-alt">
     <div class="container">
         <div class="row">
@@ -489,7 +485,6 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- CTA Section -->
 <section class="section">
     <div class="container">
         <div class="row">

@@ -4,7 +4,6 @@ $page_class = 'page-about';
 include 'partials/header.php'; 
 ?>
 
-<!-- Hero Section -->
 <section class="section hero">
     <div class="container">
         <div class="row align-items-center min-vh-100">
@@ -54,7 +53,6 @@ include 'partials/header.php';
 
 
 
-<!-- Mission & Vision -->
 <section class="section section-alt">
     <div class="container">
         <div class="row">
@@ -112,7 +110,6 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- Our Story -->
 <section class="section">
     <div class="container">
         <div class="row align-items-center">
@@ -152,7 +149,6 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- Values -->
 <section class="section section-alt">
     <div class="container">
         <div class="row">
@@ -255,7 +251,6 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- Expertise -->
 <section class="section">
     <div class="container">
         <div class="row">
@@ -358,7 +353,6 @@ include 'partials/header.php';
         </div>
     </div>
 </section>
-<!-- Culture & Team Showcase -->
 <section class="section section-culture">
     <div class="container">
         <div class="row align-items-center">
@@ -410,7 +404,6 @@ include 'partials/header.php';
         </div>
     </div>
 </section>
-<!-- Certifications & Partners -->
 <section class="section section-alt">
     <div class="container">
         <div class="row">
@@ -473,7 +466,6 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- CTA Section -->
 <section class="section">
     <div class="container">
         <div class="row">

@@ -1,11 +1,4 @@
-// filename: assets/app.js
 
-/**
- * Clearnexa Analytics Co. - Main JavaScript
- * Handles all site interactions, animations, and functionality
- */
-
-// Global app state
 const AppState = {
     isReducedMotion: window.matchMedia('(prefers-reduced-motion: reduce)').matches,
     observers: new Map(),
@@ -15,11 +8,8 @@ const AppState = {
     activeModals: new Set()
 };
 
-/**
- * Utility Functions
- */
+
 const Utils = {
-    // Debounce function for performance optimization
     debounce(func, wait, immediate) {
         let timeout;
         return function executedFunction(...args) {
@@ -34,7 +24,6 @@ const Utils = {
         };
     },
 
-    // Throttle function for scroll events
     throttle(func, limit) {
         let inThrottle;
         return function(...args) {
@@ -46,7 +35,6 @@ const Utils = {
         };
     },
 
-    // Get cookie value
     getCookie(name) {
         const value = `; ${document.cookie}`;
         const parts = value.split(`; ${name}=`);
@@ -54,7 +42,6 @@ const Utils = {
         return null;
     },
 
-    // Set cookie with options
     setCookie(name, value, days = 180, options = {}) {
         const date = new Date();
         date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
@@ -73,36 +60,30 @@ const Utils = {
         document.cookie = `${name}=${value}; ${cookieString}`;
     },
 
-    // Email validation
     validateEmail(email) {
         const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         return re.test(email);
     },
 
-    // Phone validation (Finnish format)
     validatePhone(phone) {
         const re = /^(\+358|0)[1-9][0-9]{6,10}$/;
         return re.test(phone.replace(/\s/g, ''));
     },
 
-    // Sanitize input
     sanitizeInput(input) {
         const div = document.createElement('div');
         div.textContent = input;
         return div.innerHTML;
     },
 
-    // Format date to Finnish locale
     formatDate(date) {
         return new Intl.DateTimeFormat('fi-FI').format(date);
     },
 
-    // Generate unique ID
     generateId() {
         return Math.random().toString(36).substr(2, 9);
     },
 
-    // Check if element is in viewport
     isInViewport(element, threshold = 0.1) {
         const rect = element.getBoundingClientRect();
         const windowHeight = window.innerHeight || document.documentElement.clientHeight;
@@ -117,13 +98,10 @@ const Utils = {
     }
 };
 
-/**
- * Animation and Intersection Observer
- */
+
 const AnimationController = {
     init() {
         if (AppState.isReducedMotion) {
-            // Show all elements immediately if reduced motion is preferred
             document.querySelectorAll('.reveal').forEach(el => {
                 el.classList.add('active');
             });
@@ -139,14 +117,12 @@ const AnimationController = {
         const revealObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
-                    // Add stagger delay for multiple elements
                     const delay = entry.target.dataset.delay || 0;
                     
                     setTimeout(() => {
                         entry.target.classList.add('active');
                     }, parseInt(delay));
                     
-                    // Unobserve after animation to prevent re-triggering
                     revealObserver.unobserve(entry.target);
                 }
             });
@@ -155,9 +131,7 @@ const AnimationController = {
             rootMargin: '0px 0px -50px 0px'
         });
 
-        // Observe all elements with reveal class
         document.querySelectorAll('.reveal').forEach((el, index) => {
-            // Add automatic stagger if no delay specified
             if (!el.dataset.delay) {
                 el.dataset.delay = index * 50;
             }
@@ -181,13 +155,12 @@ const AnimationController = {
                 const elementHeight = rect.height;
                 const windowHeight = window.innerHeight;
                 
-                // Only animate if element is in viewport
                 if (elementTop < scrollY + windowHeight && elementTop + elementHeight > scrollY) {
                     const yPos = -(scrollY - elementTop) * speed;
                     el.style.transform = `translate3d(0, ${yPos}px, 0)`;
                 }
             });
-        }, 16); // ~60fps
+        }, 16); 
 
         window.addEventListener('scroll', handleParallax, { passive: true });
     },
@@ -228,9 +201,7 @@ const AnimationController = {
     }
 };
 
-/**
- * Cookie Consent Management
- */
+
 const CookieManager = {
     init() {
         this.checkExistingPreference();
@@ -241,12 +212,10 @@ const CookieManager = {
         AppState.cookiePreference = Utils.getCookie('cnx_cookie_pref');
         
         if (!AppState.cookiePreference) {
-            // Show banner after page loads
             setTimeout(() => {
                 this.showBanner();
             }, 1000);
         } else {
-            // Load analytics if user has consented
             if (AppState.cookiePreference === 'all') {
                 this.loadAnalytics();
             }
@@ -257,7 +226,6 @@ const CookieManager = {
         const banner = document.getElementById('cookieBanner');
         if (banner) {
             banner.classList.add('show');
-            // Focus management for accessibility
             banner.setAttribute('role', 'dialog');
             banner.setAttribute('aria-labelledby', 'cookie-title');
             banner.setAttribute('aria-describedby', 'cookie-description');
@@ -280,16 +248,13 @@ const CookieManager = {
             modal.classList.add('show');
             AppState.activeModals.add('cookie');
             
-            // Focus management
             const firstFocusable = modal.querySelector('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
             if (firstFocusable) {
                 firstFocusable.focus();
             }
             
-            // Prevent body scroll
             document.body.style.overflow = 'hidden';
             
-            // Handle ESC key
             this.handleEscapeKey = (e) => {
                 if (e.key === 'Escape') {
                     this.hideModal();
@@ -305,10 +270,8 @@ const CookieManager = {
             modal.classList.remove('show');
             AppState.activeModals.delete('cookie');
             
-            // Restore body scroll
             document.body.style.overflow = '';
             
-            // Remove escape key handler
             if (this.handleEscapeKey) {
                 document.removeEventListener('keydown', this.handleEscapeKey);
             }
@@ -333,7 +296,6 @@ const CookieManager = {
     },
 
     bindEvents() {
-        // Cookie banner buttons
         document.addEventListener('click', (e) => {
             const action = e.target.getAttribute('data-cookie-action');
             if (!action) return;
@@ -370,22 +332,18 @@ const CookieManager = {
             }
         });
 
-        // Global cookie settings function for cookie policy page
         window.showCookieModal = () => {
             this.showModal();
         };
     },
 
     loadAnalytics() {
-        // Google Analytics 4 placeholder
         if (typeof gtag === 'undefined' && !window.dataLayer) {
-            // Load GA4 script
             const script = document.createElement('script');
             script.async = true;
             script.src = 'https://www.googletagmanager.com/gtag/js?id=GA_MEASUREMENT_ID';
             document.head.appendChild(script);
 
-            // Initialize dataLayer
             window.dataLayer = window.dataLayer || [];
             window.gtag = function() {
                 dataLayer.push(arguments);
@@ -399,13 +357,9 @@ const CookieManager = {
             });
         }
 
-        console.log('Analytics loaded with privacy settings');
     }
 };
 
-/**
- * Form Handling
- */
 const FormHandler = {
     init() {
         this.setupContactForm();
@@ -425,7 +379,6 @@ const FormHandler = {
             const formData = new FormData(contactForm);
             const data = Object.fromEntries(formData);
             
-            // Validate form
             const validation = this.validateContactForm(data);
             if (!validation.isValid) {
                 NotificationSystem.show(validation.message, 'error');
@@ -433,7 +386,6 @@ const FormHandler = {
                 return;
             }
 
-            // Submit form
             await this.submitContactForm(data, contactForm);
         });
     },
@@ -450,7 +402,6 @@ const FormHandler = {
             const email = newsletterForm.querySelector('input[type="email"]').value;
             const consent = newsletterForm.querySelector('input[type="checkbox"]').checked;
             
-            // Validate
             if (!Utils.validateEmail(email)) {
                 NotificationSystem.show('Virheellinen sähköpostiosoite.', 'error');
                 return;
@@ -461,13 +412,11 @@ const FormHandler = {
                 return;
             }
             
-            // Submit newsletter
             await this.submitNewsletter(email, newsletterForm);
         });
     },
 
     setupFormValidation() {
-        // Real-time validation for all forms
         document.addEventListener('input', (e) => {
             if (e.target.matches('input[type="email"]')) {
                 this.validateEmailField(e.target);
@@ -478,7 +427,6 @@ const FormHandler = {
             }
         });
 
-        // Form reset handlers
         document.addEventListener('click', (e) => {
             if (e.target.matches('button[type="reset"]')) {
                 setTimeout(() => {
@@ -532,13 +480,11 @@ const FormHandler = {
         field.classList.toggle('is-invalid', !isValid);
         field.classList.toggle('is-valid', isValid && field.value.length > 0);
         
-        // Remove existing feedback
         const existingFeedback = field.parentNode.querySelector('.invalid-feedback');
         if (existingFeedback) {
             existingFeedback.remove();
         }
         
-        // Add feedback if invalid
         if (!isValid && message) {
             const feedback = document.createElement('div');
             feedback.className = 'invalid-feedback';
@@ -576,11 +522,8 @@ const FormHandler = {
         this.setFormLoading(form, true);
         
         try {
-            // Simulate API call
             await new Promise(resolve => setTimeout(resolve, 1500));
             
-            // In real implementation, send to backend
-            console.log('Contact form data:', data);
             
             NotificationSystem.show(
                 'Viesti lähetetty onnistuneesti! Otamme yhteyttä pian.',
@@ -605,10 +548,8 @@ const FormHandler = {
         this.setFormLoading(form, true);
         
         try {
-            // Simulate API call
             await new Promise(resolve => setTimeout(resolve, 1000));
             
-            console.log('Newsletter subscription:', email);
             
             NotificationSystem.show(
                 'Kiitos! Uutiskirje on tilattu onnistuneesti.',
@@ -648,9 +589,7 @@ const FormHandler = {
     }
 };
 
-/**
- * Navigation and Mobile Menu
- */
+
 const NavigationController = {
     init() {
         this.setupMobileMenu();
@@ -665,7 +604,6 @@ const NavigationController = {
         
         if (!navbarToggler || !navbarCollapse) return;
 
-        // Toggle mobile menu
         navbarToggler.addEventListener('click', (e) => {
             e.preventDefault();
             const isExpanded = navbarToggler.getAttribute('aria-expanded') === 'true';
@@ -673,7 +611,6 @@ const NavigationController = {
             navbarToggler.setAttribute('aria-expanded', !isExpanded);
             navbarCollapse.classList.toggle('show');
             
-            // Update toggle icon
             const icon = navbarToggler.querySelector('i');
             if (icon) {
                 icon.className = navbarCollapse.classList.contains('show') 
@@ -682,7 +619,6 @@ const NavigationController = {
             }
         });
 
-        // Close menu when clicking outside
         document.addEventListener('click', (e) => {
             if (!navbarToggler.contains(e.target) && !navbarCollapse.contains(e.target)) {
                 navbarCollapse.classList.remove('show');
@@ -695,7 +631,6 @@ const NavigationController = {
             }
         });
 
-        // Close menu when nav link is clicked
         navbarCollapse.addEventListener('click', (e) => {
             if (e.target.matches('.nav-link')) {
                 navbarCollapse.classList.remove('show');
@@ -708,7 +643,6 @@ const NavigationController = {
             }
         });
 
-        // Handle escape key
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && navbarCollapse.classList.contains('show')) {
                 navbarCollapse.classList.remove('show');
@@ -739,7 +673,6 @@ const NavigationController = {
                     behavior: 'smooth'
                 });
 
-                // Update URL without triggering scroll
                 if (history.pushState) {
                     history.pushState(null, null, href);
                 }
@@ -781,9 +714,7 @@ const NavigationController = {
     }
 };
 
-/**
- * Accordion Functionality
- */
+
 const AccordionController = {
     init() {
         this.setupAccordions();
@@ -800,7 +731,6 @@ const AccordionController = {
             const target = document.querySelector(targetId);
             const isExpanded = button.getAttribute('aria-expanded') === 'true';
 
-            // Close all other accordion items in the same parent
             const parentAccordion = button.closest('.accordion');
             if (parentAccordion) {
                 const otherButtons = parentAccordion.querySelectorAll('.accordion-button');
@@ -818,7 +748,6 @@ const AccordionController = {
                 });
             }
 
-            // Toggle current item
             if (isExpanded) {
                 button.setAttribute('aria-expanded', 'false');
                 button.classList.add('collapsed');
@@ -832,24 +761,19 @@ const AccordionController = {
     }
 };
 
-/**
- * Notification System
- */
+
 const NotificationSystem = {
     show(message, type = 'success', duration = 5000) {
-        // Remove existing notifications
         const existing = document.querySelector('.notification');
         if (existing) {
             this.hide(existing);
         }
 
-        // Create notification element
         const notification = document.createElement('div');
         notification.className = `notification ${type}`;
         notification.setAttribute('role', 'alert');
         notification.setAttribute('aria-live', 'polite');
         
-        // Add icon based on type
         const icons = {
             success: 'bi-check-circle',
             error: 'bi-exclamation-circle',
@@ -876,20 +800,16 @@ const NotificationSystem = {
             </div>
         `;
 
-        // Add to page
         document.body.appendChild(notification);
 
-        // Show notification
         requestAnimationFrame(() => {
             notification.classList.add('show');
         });
 
-        // Auto hide
         const hideTimer = setTimeout(() => {
             this.hide(notification);
         }, duration);
 
-        // Manual close button
         const closeButton = notification.querySelector('.notification-close');
         closeButton.addEventListener('click', () => {
             clearTimeout(hideTimer);
@@ -912,9 +832,7 @@ const NotificationSystem = {
     }
 };
 
-/**
- * Performance and Optimization
- */
+
 const PerformanceOptimizer = {
     init() {
         this.setupLazyLoading();
@@ -923,7 +841,6 @@ const PerformanceOptimizer = {
     },
 
     setupLazyLoading() {
-        // Intersection Observer for lazy loading images
         if ('IntersectionObserver' in window) {
             const imageObserver = new IntersectionObserver((entries) => {
                 entries.forEach(entry => {
@@ -958,17 +875,14 @@ const PerformanceOptimizer = {
     },
 
     setupImageOptimization() {
-        // Add loading="lazy" to images that don't have it
         document.querySelectorAll('img:not([loading])').forEach(img => {
             img.setAttribute('loading', 'lazy');
         });
 
-        // Handle image load errors
         document.addEventListener('error', (e) => {
             if (e.target.tagName === 'IMG') {
                 const img = e.target;
                 
-                // Try to load fallback image
                 if (!img.dataset.fallbackAttempted) {
                     img.dataset.fallbackAttempted = 'true';
                     img.src = '../images/placeholder.webp';
@@ -978,7 +892,6 @@ const PerformanceOptimizer = {
     },
 
     setupResourceHints() {
-        // Preload critical fonts
         const fontPreloads = [
             'https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap'
         ];
@@ -993,9 +906,7 @@ const PerformanceOptimizer = {
     }
 };
 
-/**
- * Accessibility Enhancements
- */
+
 const AccessibilityEnhancer = {
     init() {
         this.setupKeyboardNavigation();
@@ -1005,11 +916,9 @@ const AccessibilityEnhancer = {
     },
 
     setupKeyboardNavigation() {
-        // Skip to main content link functionality removed
     },
 
     setupFocusManagement() {
-        // Focus trap for modals
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Tab' && AppState.activeModals.size > 0) {
                 const modal = document.querySelector('.cookie-modal.show');
@@ -1019,7 +928,6 @@ const AccessibilityEnhancer = {
             }
         });
 
-        // Focus visible indicator for custom elements
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Tab') {
                 document.body.classList.add('keyboard-navigation');
@@ -1053,7 +961,6 @@ const AccessibilityEnhancer = {
     },
 
     setupARIALabels() {
-        // Add ARIA labels to form elements without labels
         document.querySelectorAll('input:not([aria-label]):not([aria-labelledby])').forEach(input => {
             const label = input.closest('.form-group')?.querySelector('label') ||
                          document.querySelector(`label[for="${input.id}"]`);
@@ -1063,7 +970,6 @@ const AccessibilityEnhancer = {
             }
         });
 
-        // Add ARIA expanded to collapsible elements
         document.querySelectorAll('[data-bs-toggle="collapse"]').forEach(trigger => {
             const target = document.querySelector(trigger.getAttribute('data-bs-target'));
             if (target) {
@@ -1075,7 +981,6 @@ const AccessibilityEnhancer = {
     },
 
     setupReducedMotion() {
-        // Respect prefers-reduced-motion
         const mediaQuery = window.matchMedia('(prefers-reduced-motion: reduce)');
         
         const handleReducedMotion = (mq) => {
@@ -1088,9 +993,7 @@ const AccessibilityEnhancer = {
     }
 };
 
-/**
- * Error Handling and Monitoring
- */
+
 const ErrorHandler = {
     init() {
         this.setupGlobalErrorHandling();
@@ -1113,7 +1016,6 @@ const ErrorHandler = {
             console.error('Unhandled promise rejection:', e.reason);
             this.logError('Unhandled Promise Rejection', e.reason);
             
-            // Prevent default browser behavior
             e.preventDefault();
         });
     },
@@ -1129,19 +1031,13 @@ const ErrorHandler = {
             context
         };
 
-        // In production, send to error tracking service
         console.error('Error logged:', errorInfo);
         
-        // For development, you might want to send to a service like Sentry
-        // if (window.Sentry) {
-        //     window.Sentry.captureException(error, { extra: context });
-        // }
+      
     }
 };
 
-/**
- * Statistics Counter Module
- */
+
 const StatisticsCounter = {
     init() {
         this.setupCounterAnimation();
@@ -1172,7 +1068,7 @@ const StatisticsCounter = {
     animateCounter(element) {
         const target = parseInt(element.getAttribute('data-target'));
         const suffix = element.getAttribute('data-suffix') || '';
-        const duration = 2000; // 2 seconds
+        const duration = 2000; 
         const steps = 60;
         const stepValue = target / steps;
         let current = 0;
@@ -1192,14 +1088,9 @@ const StatisticsCounter = {
     }
 };
 
-/**
- * Main Application Initialization
- */
 const App = {
     init() {
-        console.log('🚀 Clearnexa Analytics Co. - Initializing...');
         
-        // Initialize all modules
         AnimationController.init();
         CookieManager.init();
         FormHandler.init();
@@ -1210,36 +1101,29 @@ const App = {
         ErrorHandler.init();
         StatisticsCounter.init();
         
-        // Set up page-specific functionality
         this.setupPageSpecific();
         
-        // Mark app as ready
         document.body.classList.add('app-ready');
         
-        console.log('✅ Clearnexa Analytics Co. - Ready!');
     },
 
     setupPageSpecific() {
         const path = window.location.pathname;
         
-        // Services page specific functionality
         if (path.includes('services')) {
             this.enhanceServicesPage();
         }
         
-        // Contact page specific functionality
         if (path.includes('contact')) {
             this.enhanceContactPage();
         }
         
-        // FAQ page specific functionality
         if (path.includes('faq')) {
             this.enhanceFAQPage();
         }
     },
 
     enhanceServicesPage() {
-        // Add smooth scrolling to service sections
         const serviceLinks = document.querySelectorAll('a[href^="#"]');
         serviceLinks.forEach(link => {
             link.addEventListener('click', (e) => {
@@ -1258,7 +1142,6 @@ const App = {
     },
 
     enhanceContactPage() {
-        // Add character counter to message field
         const messageField = document.querySelector('#message');
         if (messageField) {
             const counter = document.createElement('div');
@@ -1285,46 +1168,34 @@ const App = {
             
             messageField.parentNode.appendChild(counter);
             
-            // Trigger initial count
             messageField.dispatchEvent(new Event('input'));
         }
     },
 
     enhanceFAQPage() {
-        // FAQ search removed per request
     }
 };
 
-/**
- * Initialize when DOM is ready
- */
+
 if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => App.init());
 } else {
     App.init();
 }
 
-/**
- * Cleanup on page unload
- */
 window.addEventListener('beforeunload', () => {
-    // Cleanup observers
     AppState.observers.forEach(observer => {
         if (observer && typeof observer.disconnect === 'function') {
             observer.disconnect();
         }
     });
     
-    // Clear timers
     AppState.timers.forEach(timer => {
         clearTimeout(timer);
         clearInterval(timer);
     });
 });
 
-/**
- * Export for global access (if needed)
- */
 window.ClearnexaApp = {
     Utils,
     NotificationSystem,

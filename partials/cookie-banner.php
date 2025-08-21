@@ -1,5 +1,4 @@
  
-<!-- Cookie Consent Banner -->
 <div id="cookieBanner" class="cookie-banner">
     <div class="container">
         <div class="row align-items-center">
@@ -53,7 +52,6 @@
     </div>
 </div>
 
-<!-- Cookie Preferences Modal -->
 <div id="cookieModal" class="cookie-modal">
     <div class="cookie-modal-content">
         <div class="d-flex justify-content-between align-items-center mb-3">

@@ -4,7 +4,6 @@ $page_class = 'page-services';
 include 'partials/header.php'; 
 ?>
 
-<!-- Hero Section -->
 <section class="section hero">
     <div class="container">
         <div class="row align-items-center">
@@ -27,7 +26,6 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- Services Navigation -->
 <section class="section section-alt">
     <div class="container">
         <div class="row">
@@ -92,10 +90,8 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- Services List -->
 <div id="services-list">
 
-<!-- BI Service -->
 <section id="bi" class="section section-alt">
     <div class="container">
         <div class="row align-items-center">
@@ -135,7 +131,7 @@ include 'partials/header.php';
                         <li>Käyttäjäkoulutus</li>
                     </ul>
 
-                    <a href="/contact.php" class="btn btn-primary">
+                    <a href="contact.php" class="btn btn-primary">
                         <i class="bi bi-envelope me-2"></i>
                         Ota yhteyttä
                     </a>
@@ -192,7 +188,6 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- BI Benefits -->
 <section class="section bg-surface">
     <div class="container">
         <div class="row justify-content-center">
@@ -247,7 +242,6 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- Data Visualization Service -->
 <section id="visualization" class="section">
     <div class="container">
         <div class="row align-items-center">
@@ -290,7 +284,7 @@ include 'partials/header.php';
                         <li>Tiedon jakamisen työkalut</li>
                     </ul>
 
-                    <a href="/contact" class="btn btn-primary">
+                    <a href="contact" class="btn btn-primary">
                         <i class="bi bi-envelope me-2"></i>Ota yhteyttä
                     </a>
                 </div>
@@ -346,7 +340,6 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- Additional Benefits -->
 <section class="section section-alt">
     <div class="container">
         <div class="row justify-content-center">
@@ -398,7 +391,6 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- Predictive Analytics Service -->
 <section id="predictive" class="section section-alt">
     <div class="container">
         <div class="row align-items-center">
@@ -499,7 +491,6 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- Additional Analytics Benefits -->
 <section class="section">
     <div class="container">
         <div class="row justify-content-center">
@@ -562,7 +553,6 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- Big Data Solutions Service -->
 <section id="bigdata" class="section">
     <div class="container">
         <div class="row align-items-center">
@@ -696,7 +686,6 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- Data Engineering & ETL Service -->
 <section id="etl" class="section section-alt">
     <div class="container">
         <div class="row align-items-center">
@@ -846,7 +835,6 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- Data Governance & Compliance Service -->
 <section id="governance" class="section">
     <div class="container">
         <div class="row align-items-center">
@@ -997,7 +985,6 @@ include 'partials/header.php';
 
 </div>
 
-<!-- CTA Section -->
 <section class="section section-alt">
     <div class="container">
         <div class="row">

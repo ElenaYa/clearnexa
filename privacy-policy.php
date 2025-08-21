@@ -3,7 +3,6 @@ $page_class = 'page-legal page-privacy';
 include 'partials/header.php'; 
 ?>
 
-<!-- Privacy Policy Section -->
 <section class="section">
     <div class="container">
         <div class="row">

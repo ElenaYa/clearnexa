@@ -20,35 +20,27 @@
     <meta name="geo.placename" content="Suomi">
     <meta name="language" content="Finnish">
     
-    <!-- Open Graph Meta Tags -->
     <meta property="og:title" content="Clearnexa Analytics Co. - Data-analytiikka ja liiketoimintatiedon asiantuntijat">
     <meta property="og:description" content="Edistyneitä data-analytiikka- ja liiketoimintatiedon ratkaisuja yrityksille.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://clearnexa.com">
     <meta property="og:locale" content="fi_FI">
     
-    <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Clearnexa Analytics Co.">
     <meta name="twitter:description" content="Data-analytiikka ja liiketoimintatiedon asiantuntijat">
     
-    <!-- Favicon -->
     <link rel="icon" type="image/png" href="images/favicon.png">
     <link rel="shortcut icon" type="image/png" href="images/favicon.png">
     
-    <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
-    <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
     
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;900&display=swap" rel="stylesheet">
     
-    <!-- Custom CSS -->
     <link href="assets/style.css" rel="stylesheet">
     
-    <!-- Structured Data -->
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",

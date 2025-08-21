@@ -4,7 +4,6 @@ $page_class = 'page-legal page-terms';
 include 'partials/header.php'; 
 ?>
 
-<!-- Terms of Use Section -->
 <section class="section">
     <div class="container">
         <div class="row">

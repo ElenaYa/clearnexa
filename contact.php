@@ -4,7 +4,6 @@ $page_class = 'page-contact';
 include 'partials/header.php'; 
 ?>
 
-<!-- Hero Section -->
 <section class="section hero">
     <div class="container">
         <div class="row align-items-center">
@@ -32,7 +31,6 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- Contact Form Section -->
 <section class="section section-alt">
     <div class="container">
         <div class="row">
@@ -153,7 +151,6 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- Contact Info Section -->
 <section class="section">
     <div class="container">
         <div class="row">
@@ -229,7 +226,6 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- FAQ Preview Section -->
 <section class="section section-alt">
     <div class="container">
         <div class="row">
@@ -317,7 +313,6 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- CTA Section -->
 <section class="section">
     <div class="container">
         <div class="row">

@@ -8,7 +8,6 @@
   --accent: #2DE2E6;
   --accent-2: #A26BFF;
   
-  /* Extended color palette */
   --primary-light: #FFD98A;
   --primary-dark: #E6A500;
   --accent-light: #7FECEF;
@@ -16,7 +15,6 @@
   --accent-2-light: #C299FF;
   --accent-2-dark: #8A4AFF;
   
-  /* Semantic colors */
   --success: #10B981;
   --success-light: #6EE7B7;
   --warning: #F59E0B;
@@ -26,7 +24,6 @@
   --info: #3B82F6;
   --info-light: #93C5FD;
   
-  /* Spacing scale */
   --space-xs: 0.25rem;
   --space-sm: 0.5rem;
   --space-md: 1rem;
@@ -35,7 +32,6 @@
   --space-2xl: 3rem;
   --space-3xl: 4rem;
   
-  /* Typography scale */
   --text-xs: 0.75rem;
   --text-sm: 0.875rem;
   --text-base: 1rem;
@@ -47,26 +43,22 @@
   --text-5xl: 3rem;
   --text-6xl: 3.75rem;
   
-  /* Shadows */
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
   --shadow-md: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
   --shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
   --shadow-xl: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
   --shadow-glow: 0 0 20px rgba(255, 194, 71, 0.3);
   
-  /* Border radius */
   --radius-sm: 4px;
   --radius-md: 8px;
   --radius-lg: 16px;
   --radius-xl: 24px;
   --radius-full: 9999px;
   
-  /* Transitions */
   --transition-fast: 150ms ease;
   --transition-base: 300ms ease;
   --transition-slow: 300ms ease;
   
-  /* Z-index scale */
   --z-hide: -1;
   --z-base: 0;
   --z-elevated: 10;
@@ -75,7 +67,6 @@
   --z-toast: 1100;
 }
 
-/* Reset and base styles */
 *,
 *::before,
 *::after {
@@ -100,7 +91,6 @@ body {
   padding-top: 100px;
 }
 
-/* Selection styling */
 ::selection {
   background-color: var(--primary);
   color: var(--bg);
@@ -111,7 +101,6 @@ body {
   color: var(--bg);
 }
 
-/* Focus styles */
 :focus {
   outline: 2px solid var(--primary);
   outline-offset: 2px;
@@ -121,7 +110,6 @@ body {
   outline: none;
 }
 
-/* Scrollbar styling */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -139,7 +127,6 @@ body {
   background: var(--primary-dark);
 }
 
-/* Typography */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 700;
   line-height: 1.2;
@@ -210,7 +197,6 @@ p {
   background-clip: text;
 }
 
-/* Links */
 a {
   color: var(--primary);
   text-decoration: none;
@@ -226,7 +212,6 @@ a:focus {
   color: var(--primary-light);
 }
 
-/* Lists */
 ul, ol {
   margin-bottom: var(--space-md);
   padding-left: var(--space-xl);
@@ -241,7 +226,6 @@ li {
   padding-left: 0;
 }
 
-/* Images */
 img {
   max-width: 100%;
   height: auto;
@@ -253,7 +237,6 @@ img {
   height: auto;
 }
 
-/* Angle Banner Header */ 
 .angle-banner { 
   position: fixed; 
   top: 0; 
@@ -310,7 +293,6 @@ img {
   z-index: var(--z-base);
 }
 
-/* Navigation */
 .navbar {
   background: transparent !important;
   padding: var(--space-lg) 0;
@@ -392,7 +374,6 @@ img {
   background-color: rgba(255, 194, 71, 0.15);
 }
 
-/* Sections */
 .section {
   display: flex;
   align-items: center;
@@ -416,7 +397,6 @@ img {
   z-index: var(--z-hide);
 }
 
-/* Cards with asymmetric corners */
 .card-diagonal {
   background: var(--surface);
   border: 1px solid rgba(255, 194, 71, 0.1);
@@ -452,7 +432,6 @@ img {
   transform: translateX(0);
 }
 
-/* Process Cards */
 .process-card {
   height: 100%;
   background: linear-gradient(135deg, var(--surface) 0%, rgba(20, 26, 35, 0.8) 100%);
@@ -465,14 +444,12 @@ img {
   text-align: center;
 }
 
-/* Insights Showcase */
 .section-insights {
   position: relative;
   padding: calc(var(--space-3xl)) 0;
   overflow: hidden;
 }
 
-/* Culture & Team Showcase */
 .section-culture {
   position: relative;
 }
@@ -724,7 +701,6 @@ img {
   transform: scale(1.05);
 }
 
-/* Service Cards */
 .service-card {
   height: 100%;
   background: linear-gradient(135deg, var(--surface) 0%, rgba(20, 26, 35, 0.8) 100%);
@@ -770,7 +746,6 @@ img {
   transform: scale(1.1);
 }
 
-/* Buttons */
 .btn {
   display: inline-flex;
   align-items: center;
@@ -859,7 +834,6 @@ img {
   transform: none !important;
 }
 
-/* Badge */
 .badge {
   display: inline-flex;
   align-items: center;
@@ -876,14 +850,12 @@ img {
   color: var(--bg) !important;
 }
 
-/* Hero Section */
 .hero {
   background: linear-gradient(135deg, var(--bg) 0%, var(--surface) 50%, var(--bg) 10%);
   position: relative;
   min-height: 100svh;
 }
 
-/* Remove full height for hero sections on pages other than index and about */
 body:not(.page-index):not(.page-about) .hero {
   min-height: auto;
   padding: var(--space-3xl) 0;
@@ -908,7 +880,6 @@ body:not(.page-index):not(.page-about) .hero {
   z-index: var(--z-base);
 }
 
-/* Animation Classes */
 .reveal {
   opacity: 0;
   transform: translateY(50px);
@@ -938,7 +909,6 @@ body:not(.page-index):not(.page-about) .hero {
   }
 }
 
-/* Forms */
 .form-control {
   background: var(--surface);
   border: 2px solid rgba(255, 194, 71, 0.2);
@@ -1019,7 +989,6 @@ body:not(.page-index):not(.page-about) .hero {
   margin: 0;
 }
 
-/* Form Switch */
 .form-switch .form-check-input {
   width: 40px;
   height: 20px;
@@ -1050,7 +1019,6 @@ body:not(.page-index):not(.page-about) .hero {
   transform: translateX(20px);
 }
 
-/* Input Groups */
 .input-group {
   display: flex;
   width: 100%;
@@ -1067,7 +1035,6 @@ body:not(.page-index):not(.page-about) .hero {
   border-bottom-left-radius: 0;
 }
 
-/* Footer */
 .footer {
   background: linear-gradient(135deg, var(--surface) 0%, rgba(20, 26, 35, 0.95) 100%);
   border-top: 1px solid rgba(255, 194, 71, 0.14);
@@ -1112,7 +1079,6 @@ body:not(.page-index):not(.page-about) .hero {
   transform: scale(1.02);
 }
 
-/* Services Navigation */
 .services-nav {
   margin-bottom: var(--space-xl);
 }
@@ -1156,7 +1122,6 @@ body:not(.page-index):not(.page-about) .hero {
   font-size: var(--text-sm);
 }
 
-/* Mobile button spacing for services page */
 @media (max-width: 768px) {
   .page-services .btn {
     margin-bottom: var(--space-md);
@@ -1166,7 +1131,6 @@ body:not(.page-index):not(.page-about) .hero {
     margin-bottom: 16px;
   }
   
-  /* Hero section mobile fixes for testimonials page */
   .page-testimonials .hero .container {
     padding-left: var(--space-md);
     padding-right: var(--space-md);
@@ -1187,7 +1151,6 @@ body:not(.page-index):not(.page-about) .hero {
   }
 }
 
-/* Footer checkbox: keep perfect square and prevent shrinking */
 .footer .form-check {
   align-items: center;
 }
@@ -1224,14 +1187,12 @@ body:not(.page-index):not(.page-about) .hero {
   pointer-events: none;
 }
 
-/* Disable reveal delay/animation in footer */
 .footer .reveal {
   opacity: 1;
   transform: none;
   transition: none;
 }
 
-/* Cookie Banner */
 .cookie-banner {
   position: fixed;
   bottom: 0;
@@ -1250,7 +1211,6 @@ body:not(.page-index):not(.page-about) .hero {
   transform: translateY(0);
 }
 
-/* Cookie Modal */
 .cookie-modal {
   position: fixed;
   top: 0;
@@ -1281,7 +1241,6 @@ body:not(.page-index):not(.page-about) .hero {
   border: 1px solid rgba(255, 194, 71, 0.2);
 }
 
-/* Accordion */
 .accordion {
   background: transparent;
 }
@@ -1361,7 +1320,6 @@ body:not(.page-index):not(.page-about) .hero {
   border-top: 1px solid rgba(255, 194, 71, 0.1);
 }
 
-/* Testimonials */
 .testimonial-card {
   background: linear-gradient(135deg, var(--surface) 0%, rgba(20, 26, 35, 0.8) 100%);
   border: 1px solid rgba(45, 226, 230, 0.2);
@@ -1396,7 +1354,6 @@ body:not(.page-index):not(.page-about) .hero {
   transform: scaleX(1);
 }
 
-/* Stats */
 .stat-number {
   font-size: clamp(2rem, 4vw, 3.5rem);
   font-weight: 900;
@@ -1409,7 +1366,6 @@ body:not(.page-index):not(.page-about) .hero {
   background-clip: text;
 }
 
-/* Tables */
 .table {
   width: 100%;
   margin-bottom: var(--space-lg);
@@ -1445,7 +1401,6 @@ body:not(.page-index):not(.page-about) .hero {
   border: 1px solid rgba(255, 194, 71, 0.1);
 }
 
-/* Alerts */
 .alert {
   padding: var(--space-lg);
   margin-bottom: var(--space-lg);
@@ -1483,7 +1438,6 @@ body:not(.page-index):not(.page-about) .hero {
   font-weight: 600;
 }
 
-/* Success/Error Notifications */
 .notification {
   position: fixed;
   top: var(--space-xl);
@@ -1519,7 +1473,6 @@ body:not(.page-index):not(.page-about) .hero {
   background: var(--info);
 }
 
-/* 404 Page */
 .error-page {
   min-height: 100vh;
   display: flex;
@@ -1540,7 +1493,6 @@ body:not(.page-index):not(.page-about) .hero {
   margin-bottom: var(--space-lg);
 }
 
-/* Close button */
 .btn-close {
   background: none;
   border: none;
@@ -1561,7 +1513,6 @@ body:not(.page-index):not(.page-about) .hero {
   color: var(--text);
 }
 
-/* Utility Classes */
 .bg-gradient {
   background: linear-gradient(135deg, var(--primary), var(--accent)) !important;
 }
@@ -1619,7 +1570,6 @@ body:not(.page-index):not(.page-about) .hero {
   border-radius: var(--radius-xl) var(--radius-md) var(--radius-xl) var(--radius-md) !important;
 }
 
-/* Loading states */
 .loading {
   position: relative;
   overflow: hidden;
@@ -1645,7 +1595,6 @@ body:not(.page-index):not(.page-about) .hero {
   }
 }
 
-/* Responsive Design */
 @media (max-width: 1200px) {
   .container {
     padding-left: var(--space-lg);
@@ -1742,7 +1691,6 @@ body:not(.page-index):not(.page-about) .hero {
     font-size: clamp(4rem, 20vw, 8rem);
   }
   
-  /* Extra small screen fixes for testimonials hero */
   .page-testimonials .hero .container {
     padding-left: var(--space-sm);
     padding-right: var(--space-sm);
@@ -1762,7 +1710,6 @@ body:not(.page-index):not(.page-about) .hero {
   }
 }
 
-/* Print styles */
 @media print {
   .navbar,
   .cookie-banner,
@@ -1790,7 +1737,6 @@ body:not(.page-index):not(.page-about) .hero {
   }
 }
 
-/* High contrast mode */
 @media (prefers-contrast: high) {
   :root {
     --text: #ffffff;
@@ -1812,13 +1758,10 @@ body:not(.page-index):not(.page-about) .hero {
   }
 }
 
-/* Dark mode preference respected */
 @media (prefers-color-scheme: light) {
-  /* The site is designed for dark mode, but we respect user preference */
-  /* Dark mode is the default and primary design */
+ 
 }
 
-/* Focus-visible support */
 @supports selector(:focus-visible) {
   :focus {
     outline: none;
@@ -1830,14 +1773,12 @@ body:not(.page-index):not(.page-about) .hero {
   }
 }
 
-/* Legal pages: show content immediately */
 .page-legal .reveal {
 	opacity: 1;
 	transform: none;
 	transition: none;
 }
 
-/* Disclaimer page mobile typography fixes */
 @media (max-width: 768px) {
   .page-disclaimer h1,
   .page-disclaimer h2,
@@ -1891,7 +1832,6 @@ body:not(.page-index):not(.page-about) .hero {
   }
 }
 
-/* Terms page mobile typography fixes */
 @media (max-width: 768px) {
   .page-terms h1 {
     font-size: var(--text-2xl);
@@ -1922,7 +1862,6 @@ body:not(.page-index):not(.page-about) .hero {
   }
 }
 
-/* Privacy policy page mobile typography fixes */
 @media (max-width: 768px) {
   .page-privacy h1 {
     font-size: var(--text-2xl);

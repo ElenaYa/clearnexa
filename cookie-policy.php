@@ -4,7 +4,6 @@ $page_class = 'page-legal page-cookies';
 include 'partials/header.php'; 
 ?>
 
-<!-- Cookie Policy Section -->
 <section class="section">
     <div class="container">
         <div class="row">

@@ -4,7 +4,6 @@ $page_class = 'page-faq';
 include 'partials/header.php'; 
 ?>
 
-<!-- Hero Section -->
 <section class="section hero">
     <div class="container">
         <div class="row align-items-center">
@@ -28,13 +27,11 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- FAQ Content -->
 <section id="faq-content" class="section section-alt">
     <div class="container">
         <div class="row">
             <div class="col-lg-10 mx-auto">
                 
-                <!-- Palvelut ja Prosessit -->
                 <div class="reveal mb-5">
                     <h3 class="text-primary mb-4">
                         <i class="bi bi-gear me-2"></i>
@@ -164,7 +161,6 @@ include 'partials/header.php';
                     </div>
                 </div>
 
-                <!-- Teknologia ja Työkalut -->
                 <div class="reveal mb-5">
                     <h3 class="text-primary mb-4">
                         <i class="bi bi-cpu me-2"></i>
@@ -321,7 +317,6 @@ include 'partials/header.php';
                     </div>
                 </div>
 
-                <!-- Hinnoittelu ja Sopimukset -->
                 <div class="reveal mb-5">
                     <h3 class="text-primary mb-4">
                         <i class="bi bi-currency-euro me-2"></i>
@@ -415,7 +410,6 @@ include 'partials/header.php';
                     </div>
                 </div>
 
-                <!-- Tuki ja Koulutus -->
                 <div class="reveal mb-5">
                     <h3 class="text-primary mb-4">
                         <i class="bi bi-life-preserver me-2"></i>
@@ -510,7 +504,6 @@ include 'partials/header.php';
                     </div>
                 </div>
 
-                <!-- Yhteistyö ja Sarvaus -->
                 <div class="reveal mb-5">
                     <h3 class="text-primary mb-4">
                         <i class="bi bi-people me-2"></i>
@@ -581,7 +574,6 @@ include 'partials/header.php';
                     </div>
                 </div>
         
-        <!-- Yhteistyö ja Projektinhallinta -->
         <div class="reveal mb-5">
             <h3 class="text-primary mb-4">
                 <i class="bi bi-chat-dots me-2"></i>
@@ -657,7 +649,6 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- CTA Section -->
 <section class="section">
     <div class="container">
         <div class="row">

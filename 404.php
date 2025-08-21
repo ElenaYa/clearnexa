@@ -4,7 +4,6 @@
 include 'partials/header.php'; 
 ?>
 
-<!-- 404 Error Section -->
 <section class="error-page">
     <div class="container">
         <div class="row">
@@ -27,7 +26,6 @@ include 'partials/header.php';
                         </a>
                     </div>
                     
-                    <!-- Popular Links -->
                     <div class="row g-4 mt-4">
                         <div class="col-md-3 col-6">
                             <div class="card-diagonal p-3 h-100">

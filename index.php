@@ -1,5 +1,4 @@
 <?php
-// SEO Meta Variables
 $meta_title = "Clearnexa Analytics Co. - Data-analytiikka ja liiketoimintatiedon asiantuntijat Suomessa";
 $meta_description = "Clearnexa Analytics Co. tarjoaa edistyneitä data-analytiikka- ja liiketoimintatiedon ratkaisuja yrityksille. BI, visualisointi, ennustava analytiikka ja big data -palvelut Suomessa.";
 $meta_keywords = "data-analytiikka, liiketoimintatiedon hallinta, BI, business intelligence, datan visualisointi, ennustava analytiikka, big data, ETL, data governance, Suomi";
@@ -8,7 +7,6 @@ $page_class = 'page-index';
 include 'partials/header.php';
 ?>
 
-<!-- Hero Section -->
 <section class="hero section">
     <div class="container">
         <div class="row align-items-center">
@@ -46,7 +44,6 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- Insights Showcase (Full-Width Custom Section) -->
 <section class="section section-insights">
     <div class="insights-grid">
         <div class="insights-content reveal">
@@ -109,7 +106,6 @@ include 'partials/header.php';
     <div class="insights-decoration insights-decoration-3"></div>
 </section>
 
-<!-- Statistics Section -->
 <section class="section section-alt">
     <div class="container">
         <div class="row">
@@ -164,7 +160,6 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- Services Preview Section -->
 <section class="section">
     <div class="container">
         <div class="row">
@@ -246,7 +241,6 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- Why Choose Us Section -->
 <section class="section section-alt">
     <div class="container">
         <div class="row align-items-center">
@@ -319,7 +313,6 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- Process Section -->
 <section class="section">
     <div class="container">
         <div class="row">
@@ -401,7 +394,6 @@ include 'partials/header.php';
     </div>
 </section>
 
-<!-- CTA Section -->
 <section class="section section-alt">
     <div class="container">
         <div class="row">
